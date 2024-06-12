@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6 Column, 50 Row Table</title>
+    <style>
+        body {
+            color: red;
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: yellow;
+        }
+        .marquee-container {
+            height: 550px; /* Set a fixed height for the container */
+            overflow: hidden; /* Hide the overflow content */
+            position: relative; /* Set position relative for the container */
+        }
+        .marquee-content {
+            animation: marquee-up 500s linear infinite; /* Use keyframe animation for upward scrolling */
+            position: absolute; /* Position absolute for scrolling content */
+            bottom: -10%; /* Start the marquee from the bottom */
+            width: 100%;
+        }
+        @keyframes marquee-up {
+            0% {
+                transform: translateY(100%); /* Start from below the container */
+            }
+            100% {
+                transform: translateY(-10%); /* Scroll up to above the container */
+            }
+        }
+        .fixed-header {
+            position: sticky; /* Position sticky for the fixed header */
+            top: 0;
+            background-color: white; /* Background color to match the page */
+            z-index: 1;
+        }
+        /* Adjusting column widths */
+        th:nth-child(1),
+        td:nth-child(1) {
+            width: 5%; /* Set the width of the first column */
+        }
+        th:nth-child(2),
+        td:nth-child(2) {
+            width:31%; /* Set the width of the second column */
+        }
+        th:nth-child(3),
+        td:nth-child(3) {
+            width: 31%; /* Set the width of the third column */
+        }
+        th:nth-child(4),
+        td:nth-child(4) {
+            width: 10%; /* Set the width of the fourth column */
+        }
+        th:nth-child(5),
+        td:nth-child(5) {
+            width: 10%; /* Set the width of the fifth column */
+        }
+        th:nth-child(6),
+        td:nth-child(6) {
+            width: 10%; /* Set the width of the sixth column */
+        }
+        /* Responsive styles */
+        @media screen and (max-width: 600px) {
+            body {
+                font-size: 14px;
+            }
+            table {
+                font-size: 12px;
+            }
+            th, td {
+                padding: 5px;
+            }
+            .marquee-container {
+                height: auto;
+            }
+            .marquee-content {
+                position: static;
+                animation: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h1 style="color: red; background-color: white; text-align: center; font-size: 24px;">
+    <img src="https://i.ibb.co/K0qpc3R/Coop-Logo-New1.jpg" alt="Coop-Logo-New1" border="0" style="float: left; margin-right: 10px;">
+    श्री नमुना कृषक बहुमुखी सहकारी संस्था लि.,मनहरी गाउँपालिका -३,गैरिचोक,मकवानपुर<br>स्थापना २०५५/१२/२२ <br>सुपथ मूल्य उपभोक्ता पसलको मूल्य सुची  (मिति:२०८१/०१/२८)
+</h1>
+<div class="marquee-container">
+    <div class="fixed-header">
+        <table>
+            <thead>
+                <tr>
+                    <th>क्र.स.</th>
+                    <th>PRODUCT NAME</th>
+                    <th>सामानको नाम</th>
+                    <th>एकाई </th>
+                    <th>खुद्रा मूल्य </th>
+                    <th>कैफियत</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <div class="marquee-content">
+        <table>
+            <tbody>
+               <tr>	<td>	1	</td>	<td>	2pm Cheese Balls	</td>	<td>	२पियम चिज बल	</td>	<td>	Pieces	</td>	<td>	60.000	</td>	<td>	-	</td>	       </tr>
+ <tr>	<td>	2	</td>	<td>	Aalas	</td>	<td>	आलस 	</td>	<td>	Kilogram	</td>	<td>	230.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	3	</td>	<td>	Aalas Chop	</td>	<td>	आलस छोप 	</td>	<td>	Kilogram	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	4	</td>	<td>	Aata Sahanai 1 Kg	</td>	<td>	आटा सहानाइ १ केजी	</td>	<td>	Packet	</td>	<td>	85.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	5	</td>	<td>	Aata Sahanai 2 Kg	</td>	<td>	आटा सहानाइ २ केजी	</td>	<td>	Packet	</td>	<td>	170.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	6	</td>	<td>	Aata Sahanai 5 Kg	</td>	<td>	आटा सहानाइ ५ केजी	</td>	<td>	Packet	</td>	<td>	345.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	7	</td>	<td>	Aayo Noon 1 Kg	</td>	<td>	आयो नून १ किलो	</td>	<td>	Packet	</td>	<td>	22.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	8	</td>	<td>	Abir Damaru 200 Gm	</td>	<td>	अबिर डमरु 200 ग्राम	</td>	<td>	Packet	</td>	<td>	25.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	9	</td>	<td>	Aithe	</td>	<td>	ऐठे	</td>	<td>	Pieces	</td>	<td>	10.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	10	</td>	<td>	Ajina Mota	</td>	<td>	अजिना मोटा	</td>	<td>	Packet	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	11	</td>	<td>	Akabare Chips 50	</td>	<td>	अकबरे चिप्स ५० 	</td>	<td>	Pieces	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	12	</td>	<td>	Akabere Noodle	</td>	<td>	अकाबेरे नूडल	</td>	<td>	Packet	</td>	<td>	20.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	13	</td>	<td>	Almond 80Gm	</td>	<td>	बादाम 80 ग्राम	</td>	<td>	Packet	</td>	<td>	135.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	14	</td>	<td>	Aloevera Kanti	</td>	<td>	एलोभेरा कान्ति	</td>	<td>	Pieces	</td>	<td>	70.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	15	</td>	<td>	Aloevera Kanti 75gm	</td>	<td>	एलोभेरा कान्ति ७५ ग्राम	</td>	<td>	Pieces	</td>	<td>	35.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	16	</td>	<td>	Alpenliebe Creamfill	</td>	<td>	Alpenliebe क्रीमफिल	</td>	<td>	Pieces	</td>	<td>	10.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	17	</td>	<td>	Alpenliebe Lolipop	</td>	<td>	Alpenliebe Lolipop	</td>	<td>	Pieces	</td>	<td>	5.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	18	</td>	<td>	Anda Thulo	</td>	<td>	अन्डा ठुलो 	</td>	<td>	Pieces	</td>	<td>	18.330		<td>	-	</td>	       </tr>
+ <tr>	<td>	19	</td>	<td>	Arial Surf 1 Kg	</td>	<td>	एरियल सर्फ 1 किलो	</td>	<td>	Packet	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	20	</td>	<td>	Arial Surf 500gm	</td>	<td>	एरियल सर्फ 500 ग्राम	</td>	<td>	Packet	</td>	<td>	240.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	21	</td>	<td>	B1 Dana	</td>	<td>	B1 दाना	</td>	<td>	Kilogram	</td>	<td>	85.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	22	</td>	<td>	B2 Dana	</td>	<td>	B2 दाना	</td>	<td>	Kilogram	</td>	<td>	85.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	23	</td>	<td>	Baby Brush	</td>	<td>	बेबी ब्रश	</td>	<td>	Pieces	</td>	<td>	45.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	24	</td>	<td>	Badam	</td>	<td>	बदाम	</td>	<td>	Kilogram	</td>	<td>	220.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	25	</td>	<td>	Badam 400Gm	</td>	<td>	बदाम 400 ग्राम	</td>	<td>	Packet	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	26	</td>	<td>	Badame Biscuit	</td>	<td>	बदाम बिस्कुट	</td>	<td>	Pieces	</td>	<td>	5.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	27	</td>	<td>	Badam  Milk Drink	</td>	<td>	बदाम दूध पिउने	</td>	<td>	can	</td>	<td>	80.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	28	</td>	<td>	Ball Pen	</td>	<td>	बल पेन	</td>	<td>	Pieces	</td>	<td>	10.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	29	</td>	<td>	Ball Pen 5	</td>	<td>	बल पेन ५	</td>	<td>	Pieces	</td>	<td>	5.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	30	</td>	<td>	Basmati Longgrain Khulla	</td>	<td>	बासमती लङ्गग्रेन खुल्ला	</td>	<td>	Kilogram	</td>	<td>	180.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	31	</td>	<td>	Basmati Rice 1 Kg	</td>	<td>	बासमती चामल १ किलो	</td>	<td>	Packet	</td>	<td>	185.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	32	</td>	<td>	Bateko Dhup	</td>	<td>	बटेको धुप	</td>	<td>	Mutha	</td>	<td>	5.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	33	</td>	<td>	Batisa Pauder 200Gm	</td>	<td>	बतिसा पौडेर 200 ग्राम	</td>	<td>	Packet	</td>	<td>	145.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	34	</td>	<td>	Battery Sano	</td>	<td>	ब्याट्री Sano	</td>	<td>	Pieces	</td>	<td>	15.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	35	</td>	<td>	Battery Thulo	</td>	<td>	ब्याट्री थुलो	</td>	<td>	Pieces	</td>	<td>	20.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	36	</td>	<td>	Besan	</td>	<td>	बेसन	</td>	<td>	Packet	</td>	<td>	40.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	37	</td>	<td>	Besar	</td>	<td>	बेसर	</td>	<td>	Packet	</td>	<td>	40.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	38	</td>	<td>	Besar 500Gm	</td>	<td>	बेसर 500 ग्राम	</td>	<td>	Packet	</td>	<td>	280.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	39	</td>	<td>	Besar Sarbottam	</td>	<td>	बेसर सर्वोत्तम	</td>	<td>	Kilogram	</td>	<td>	180.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	40	</td>	<td>	Besar SMU 200 Gm	</td>	<td>	Besar SMU 200 Gm	</td>	<td>	Packet	</td>	<td>	90.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	41	</td>	<td>	Besar SMU 500 Gm	</td>	<td>	Besar SMU 500 Gm	</td>	<td>	Packet	</td>	<td>	280.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	42	</td>	<td>	Bhada Majhni Jali	</td>	<td>	भाडा मझनी जाली	</td>	<td>	Pieces	</td>	<td>	25.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	43	</td>	<td>	Bhanta Seeds	</td>	<td>	भन्त बीज	</td>	<td>	Packet	</td>	<td>	290.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	44	</td>	<td>	Bhatamas	</td>	<td>	भाटमास	</td>	<td>	Kilogram	</td>	<td>	220.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	45	</td>	<td>	BH-Banana	</td>	<td>	BH-केरा	</td>	<td>	Pieces	</td>	<td>	5.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	46	</td>	<td>	Bhola	</td>	<td>	भोला	</td>	<td>	Packet	</td>	<td>	5.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	47	</td>	<td>	Bhuja 1 Kg	</td>	<td>	भुजा १ किलो	</td>	<td>	Packet	</td>	<td>	110.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	48	</td>	<td>	Bhuja 250 Grm	</td>	<td>	भुजा 250 ग्राम	</td>	<td>	Packet	</td>	<td>	30.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	49	</td>	<td>	Bhuja 500 Gm	</td>	<td>	भुजा ५०० ग्राम	</td>	<td>	Packet	</td>	<td>	60.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	50	</td>	<td>	BHuteko Til 100gm	</td>	<td>	भुतेको तिल 100 ग्राम	</td>	<td>	Packet	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	51	</td>	<td>	BHuteko Til 500gm	</td>	<td>	भुतेको तिल ५०० ग्राम	</td>	<td>	Packet	</td>	<td>	280.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	52	</td>	<td>	Big MiMi	</td>	<td>	ठूलो MiMi	</td>	<td>	Packet	</td>	<td>	10.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	53	</td>	<td>	Bire Noon 1 Kg	</td>	<td>	बिरे दिउँसो १ किलो	</td>	<td>	Packet	</td>	<td>	60.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	54	</td>	<td>	Bire Noon 200Gm	</td>	<td>	बिरे नून 200 ग्राम	</td>	<td>	Packet	</td>	<td>	40.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	55	</td>	<td>	Bodi Double Harvest Green 100gm	</td>	<td>	बोडी डबल हार्वेस्ट हरियो 100 ग्राम	</td>	<td>	Packet	</td>	<td>	245.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	56	</td>	<td>	Bom Pauroti	</td>	<td>	बम पौरोती	</td>	<td>	Pieces	</td>	<td>	10.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	57	</td>	<td>	Bonbon Biscuit	</td>	<td>	बोनबोन बिस्कुट	</td>	<td>	Pieces	</td>	<td>	10.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	58	</td>	<td>	Bora	</td>	<td>	बोरा	</td>	<td>	Pieces	</td>	<td>	14.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	59	</td>	<td>	Brust Mango 180 Ml	</td>	<td>	ब्रस्ट म्यान्गो 180 एमएल	</td>	<td>	Pieces	</td>	<td>	20.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	60	</td>	<td>	Brust Mango 1 Li	</td>	<td>	Brust Mango 1 Li	</td>	<td>	Pieces	</td>	<td>	180.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	61	</td>	<td>	Brust Mix 1 Li	</td>	<td>	ब्रस्ट मिक्स १ ली	</td>	<td>	Pieces	</td>	<td>	180.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	62	</td>	<td>	Butter Cracker Biscuit  10	</td>	<td>	बटर क्र्याकर बिस्कुट १०	</td>	<td>	Pieces	</td>	<td>	10.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	63	</td>	<td>	Cabbage N-766	</td>	<td>	बन्दकोबी N-766	</td>	<td>	Packet	</td>	<td>	290.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	64	</td>	<td>	Cake 13Gm	</td>	<td>	केक 13 ग्राम	</td>	<td>	Pieces	</td>	<td>	10.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	65	</td>	<td>	Cake 160	</td>	<td>	केक 160	</td>	<td>	Packet	</td>	<td>	10.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	66	</td>	<td>	Cake 40	</td>	<td>	केक 40	</td>	<td>	Packet	</td>	<td>	40.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	67	</td>	<td>	Cake 60	</td>	<td>	केक 60	</td>	<td>	Packet	</td>	<td>	60.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	68	</td>	<td>	Cauliflower Barkha	</td>	<td>	काउली बरखा	</td>	<td>	Packet	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	69	</td>	<td>	Cauliflower-Madhav	</td>	<td>	फूलगोभी - माधव	</td>	<td>	Packet	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	70	</td>	<td>	CDC Colget 100 Gm	</td>	<td>	CDC Colget 100 ग्राम	</td>	<td>	Pieces	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	71	</td>	<td>	CDC Colget 150 Gm	</td>	<td>	CDC Colget 150 ग्राम	</td>	<td>	Pieces	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	72	</td>	<td>	CDC Colget 46 Gm	</td>	<td>	CDC Colget 46 Gm	</td>	<td>	Pieces	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	73	</td>	<td>	Center Fresh Mints	</td>	<td>	केन्द्र ताजा टकसाल	</td>	<td>	Pieces	</td>	<td>	2.500		<td>	-	</td>	       </tr>
+ <tr>	<td>	74	</td>	<td>	Center Fruit	</td>	<td>	केन्द्र फल	</td>	<td>	Pieces	</td>	<td>	2.500		<td>	-	</td>	       </tr>
+ <tr>	<td>	75	</td>	<td>	Century Chaumin Masala 50g	</td>	<td>	सेन्चुरी चाउमिन मसाला ५० ग्राम	</td>	<td>	Packet	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	76	</td>	<td>	Century Meet Masala 50g	</td>	<td>	सेन्चुरी मीट मसाला ५० ग्राम	</td>	<td>	Packet	</td>	<td>	55.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	77	</td>	<td>	Century MO:MO Masala 50g	</td>	<td>	Century MO:MO मसाला 50g	</td>	<td>	Packet	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	78	</td>	<td>	Chakada 100 Gm	</td>	<td>	चकडा 100 ग्राम	</td>	<td>	Packet	</td>	<td>	70.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	79	</td>	<td>	Chakada 200Gm	</td>	<td>	चकडा 200 ग्राम	</td>	<td>	Packet	</td>	<td>	120.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	80	</td>	<td>	Chakada Khulla	</td>	<td>	चकडा खुल्ला	</td>	<td>	Kilogram	</td>	<td>	500.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	81	</td>	<td>	Champion 1Kg	</td>	<td>	च्याम्पियन १ केजी	</td>	<td>	Packet	</td>	<td>	545.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	82	</td>	<td>	Chana	</td>	<td>	चना	</td>	<td>	Kilogram	</td>	<td>	125.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	83	</td>	<td>	Chana Satu Sarbottam	</td>	<td>	चना सातु सर्वोत्तम	</td>	<td>	Kilogram	</td>	<td>	120.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	84	</td>	<td>	Chandan Dhoop	</td>	<td>	चन्दन धुप	</td>	<td>	Packet	</td>	<td>	100.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	85	</td>	<td>	Chatpate Masala	</td>	<td>	चाटपाटे मसाला	</td>	<td>	Packet	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	86	</td>	<td>	Chaumin	</td>	<td>	चाउमिन	</td>	<td>	Packet	</td>	<td>	90.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	87	</td>	<td>	Chaumin 130 Gm	</td>	<td>	चाउमिन 130 ग्राम	</td>	<td>	Packet	</td>	<td>	30.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	88	</td>	<td>	Cheese balls	</td>	<td>	चीज बलहरू	</td>	<td>	Packet	</td>	<td>	20.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	89	</td>	<td>	Cheese Balls 10	</td>	<td>	चीज बलहरू 10	</td>	<td>	Packet	</td>	<td>	10.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	90	</td>	<td>	Cheese Balls 60	</td>	<td>	चीज बलहरू 60	</td>	<td>	Packet	</td>	<td>	60.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	91	</td>	<td>	Chichinda Karnali 10gm	</td>	<td>	चिचिन्द कर्णाली १० ग्राम	</td>	<td>	Packet	</td>	<td>	145.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	92	</td>	<td>	Chicken Soup	</td>	<td>	कुखुराको झोल	</td>	<td>	Packet	</td>	<td>	80.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	93	</td>	<td>	Chini (sugar)	</td>	<td>	चिनी (चिनी)	</td>	<td>	Kilogram	</td>	<td>	110.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	94	</td>	<td>	Chips 12 Gm	</td>	<td>	चिप्स 12 ग्राम	</td>	<td>	Packet	</td>	<td>	10.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	95	</td>	<td>	Chips 20	</td>	<td>	चिप्स २०	</td>	<td>	Packet	</td>	<td>	20.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	96	</td>	<td>	Chips 40	</td>	<td>	चिप्स 40	</td>	<td>	Packet	</td>	<td>	40.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	97	</td>	<td>	Chips 50	</td>	<td>	चिप्स ५०	</td>	<td>	Packet	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	98	</td>	<td>	Chiura 1Kg Pouch	</td>	<td>	Chiura 1Kg थैली	</td>	<td>	Packet	</td>	<td>	100.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	99	</td>	<td>	Chiura Khulla	</td>	<td>	चिउरा खुल्ला	</td>	<td>	Kilogram	</td>	<td>	95.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	100	</td>	<td>	Choco Fun	</td>	<td>	चोको रमाइलो	</td>	<td>	Pieces	</td>	<td>	5.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	101	</td>	<td>	Chocolate	</td>	<td>	चकलेट	</td>	<td>	Pieces	</td>	<td>	1.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	102	</td>	<td>	chocolate badam bite	</td>	<td>	चकलेट बदामको टोकाइ	</td>	<td>	Pieces	</td>	<td>	6.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	103	</td>	<td>	Chocolate Delight	</td>	<td>	चकलेट डिलाइट	</td>	<td>	Pieces	</td>	<td>	15.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	104	</td>	<td>	Chocomira Chocolate	</td>	<td>	Chocomira चकलेट	</td>	<td>	Pieces	</td>	<td>	15.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	105	</td>	<td>	Choco Pie	</td>	<td>	चोको पाई	</td>	<td>	Packet	</td>	<td>	25.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	106	</td>	<td>	Choco Plus	</td>	<td>	चोको प्लस	</td>	<td>	Packet	</td>	<td>	250.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	107	</td>	<td>	Chokar	</td>	<td>	चोकर	</td>	<td>	Bora	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	108	</td>	<td>	Chokom Jam	</td>	<td>	चोकोम जाम	</td>	<td>	Pieces	</td>	<td>	330.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	109	</td>	<td>	Chuk Amilo	</td>	<td>	चुक अमिलो	</td>	<td>	Bottle	</td>	<td>	80.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	110	</td>	<td>	Chyawanprash 1Kg	</td>	<td>	च्यवनप्रास १ केजी	</td>	<td>	Pieces	</td>	<td>	580.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	111	</td>	<td>	Cibaca Brush 25	</td>	<td>	सिबाका ब्रश 25	</td>	<td>	Pieces	</td>	<td>	25.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	112	</td>	<td>	Clears Shampoo 330 Ml	</td>	<td>	क्लियर्स स्याम्पु ३३० एमएल	</td>	<td>	Pieces	</td>	<td>	325.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	113	</td>	<td>	Close up Red  150G	</td>	<td>	रातो 150G बन्द गर्नुहोस्	</td>	<td>	Pieces	</td>	<td>	125.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	114	</td>	<td>	Close up Red  40G	</td>	<td>	रातो 40G बन्द गर्नुहोस्	</td>	<td>	Pieces	</td>	<td>	28.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	115	</td>	<td>	Close up Red  80G	</td>	<td>	रातो 80G बन्द गर्नुहोस्	</td>	<td>	Pieces	</td>	<td>	55.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	116	</td>	<td>	Coconut Biscuit	</td>	<td>	नरिवल बिस्कुट	</td>	<td>	Packet	</td>	<td>	10.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	117	</td>	<td>	Coconut Biscuit 20	</td>	<td>	नरिवल बिस्कुट २०	</td>	<td>	Pieces	</td>	<td>	20.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	118	</td>	<td>	Coconut Cookies	</td>	<td>	नरिवल कुकीज	</td>	<td>	Packet	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	119	</td>	<td>	Cocopeat Block 5Kg	</td>	<td>	कोकोपिट ब्लक 5 केजी	</td>	<td>	Kilogram	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	120	</td>	<td>	Cocopeat Block 650 Gram	</td>	<td>	कोकोपिट ब्लक 650 ग्राम	</td>	<td>	Pieces	</td>	<td>	105.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	121	</td>	<td>	Coffee 24g	</td>	<td>	कफी 24 ग्राम	</td>	<td>	Pieces	</td>	<td>	145.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	122	</td>	<td>	Coffee 50g	</td>	<td>	कफी 50 ग्राम	</td>	<td>	Pieces	</td>	<td>	288.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	123	</td>	<td>	Coke 1.5 li	</td>	<td>	कोक 1.5 ली	</td>	<td>	Bottle	</td>	<td>	180.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	124	</td>	<td>	Coke 1 Lit.	</td>	<td>	कोक १ लि.	</td>	<td>	Bottle	</td>	<td>	130.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	125	</td>	<td>	Coke 2.25 Lit.	</td>	<td>	कोक 2.25 लिटर।	</td>	<td>	Bottle	</td>	<td>	255.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	126	</td>	<td>	Coke 250Ml	</td>	<td>	कोक 250 एमएल	</td>	<td>	Pieces	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	127	</td>	<td>	Coke 2 Lit.	</td>	<td>	कोक २ लिटर।	</td>	<td>	Bottle	</td>	<td>	225.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	128	</td>	<td>	Colour	</td>	<td>	रङ	</td>	<td>	Kilogram	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	129	</td>	<td>	Copy Universal 200 NBL	</td>	<td>	Universal 200 NBL प्रतिलिपि गर्नुहोस्	</td>	<td>	Pieces	</td>	<td>	20.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	130	</td>	<td>	Copy Universal 300 NBL	</td>	<td>	Universal 300 NBL प्रतिलिपि गर्नुहोस्	</td>	<td>	Pieces	</td>	<td>	30.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	131	</td>	<td>	Copy Universal 400 NBL	</td>	<td>	Universal 400 NBL प्रतिलिपि गर्नुहोस्	</td>	<td>	Pieces	</td>	<td>	40.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	132	</td>	<td>	Copy Universal 500 NBL	</td>	<td>	Universal 500 NBL प्रतिलिपि गर्नुहोस्	</td>	<td>	Pieces	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	133	</td>	<td>	Copy Universal 600 NBL	</td>	<td>	Universal 600 NBL प्रतिलिपि गर्नुहोस्	</td>	<td>	Pieces	</td>	<td>	60.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	134	</td>	<td>	Copy Universal 800 NBL	</td>	<td>	Universal 800 NBL प्रतिलिपि गर्नुहोस्	</td>	<td>	Pieces	</td>	<td>	80.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	135	</td>	<td>	Corn Flakes 300gm	</td>	<td>	कोर्न फ्लेक्स 300 ग्राम	</td>	<td>	Packet	</td>	<td>	150.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	136	</td>	<td>	Corn Flakes 500gm	</td>	<td>	कोर्न फ्लेक्स 500 ग्राम	</td>	<td>	Packet	</td>	<td>	245.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	137	</td>	<td>	Corn Flakes Sugarfree 300gm	</td>	<td>	कर्न फ्लेक्स सुगरफ्री ३०० ग्राम	</td>	<td>	Packet	</td>	<td>	150.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	138	</td>	<td>	Crackies Biscuit	</td>	<td>	क्र्याकी बिस्कुट	</td>	<td>	Packet	</td>	<td>	10.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	139	</td>	<td>	Cream Biscuit 10	</td>	<td>	क्रीम बिस्कुट 10	</td>	<td>	Pieces	</td>	<td>	10.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	140	</td>	<td>	Cream Roll	</td>	<td>	क्रीम रोल	</td>	<td>	Pieces	</td>	<td>	10.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	141	</td>	<td>	Crecker 20 Gm	</td>	<td>	क्रेकर २० ग्राम	</td>	<td>	Packet	</td>	<td>	20.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	142	</td>	<td>	CTC Tea 100 Gm	</td>	<td>	CTC चिया 100 ग्राम	</td>	<td>	Packet	</td>	<td>	100.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	143	</td>	<td>	CTC Tea 200 Gm	</td>	<td>	CTC चिया 200 ग्राम	</td>	<td>	Packet	</td>	<td>	200.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	144	</td>	<td>	CTC Tea 500 Gm	</td>	<td>	CTC चिया 500 ग्राम	</td>	<td>	Packet	</td>	<td>	230.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	145	</td>	<td>	Current Cheese Balls	</td>	<td>	हालको चीज बलहरू	</td>	<td>	Packet	</td>	<td>	60.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	146	</td>	<td>	Current Garam Masala	</td>	<td>	हालको गरम मसाला	</td>	<td>	Packet	</td>	<td>	80.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	147	</td>	<td>	Current Kashmiri Mirch	</td>	<td>	वर्तमान काश्मिरी मिर्च	</td>	<td>	Packet	</td>	<td>	100.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	148	</td>	<td>	Current Meat Masala	</td>	<td>	हालको मासु मसाला	</td>	<td>	Packet	</td>	<td>	55.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	149	</td>	<td>	Current Noodle	</td>	<td>	हालको चाउचाउ	</td>	<td>	Packet	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	150	</td>	<td>	Current Potato Cracker	</td>	<td>	हालको आलु क्र्याकर	</td>	<td>	Packet	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	151	</td>	<td>	Current Sticks	</td>	<td>	हालको स्टिकहरू	</td>	<td>	Packet	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	152	</td>	<td>	Custard Biscuit	</td>	<td>	कस्टर्ड बिस्कुट	</td>	<td>	Packet	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	153	</td>	<td>	Cut Copy	</td>	<td>	प्रतिलिपि काट्नुहोस्	</td>	<td>	Pieces	</td>	<td>	25.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	154	</td>	<td>	Cut copy 310	</td>	<td>	कट प्रतिलिपि 310	</td>	<td>	Pieces	</td>	<td>	30.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	155	</td>	<td>	Cut Mishri	</td>	<td>	मिश्री काट्नुहोस्	</td>	<td>	Packet	</td>	<td>	150.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	156	</td>	<td>	Cut Misri 100Gm	</td>	<td>	मिश्री 100 ग्राम काट्नुहोस्	</td>	<td>	Packet	</td>	<td>	40.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	157	</td>	<td>	Dabur Red Pest 175 Gm	</td>	<td>	डाबर रातो कीट 175 ग्राम	</td>	<td>	Pieces	</td>	<td>	150.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	158	</td>	<td>	Dabur Red Pest 40 Gm	</td>	<td>	डाबर रातो कीट ४० ग्राम	</td>	<td>	Pieces	</td>	<td>	40.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	159	</td>	<td>	Dabur Red Pest 80 Gm	</td>	<td>	डाबर रातो कीट 80 ग्राम	</td>	<td>	Pieces	</td>	<td>	75.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	160	</td>	<td>	Dahi 500ML	</td>	<td>	दही 500ML	</td>	<td>	Packet	</td>	<td>	75.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	161	</td>	<td>	Dairy Ghee 500Ml	</td>	<td>	डेयरी घिउ 500ml	</td>	<td>	Kilogram	</td>	<td>	575.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	162	</td>	<td>	Dairy Milk 13.2gm	</td>	<td>	डेयरी मिल्क १३.२ ग्राम	</td>	<td>	Packet	</td>	<td>	20.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	163	</td>	<td>	Dairy Smiley	</td>	<td>	डेयरी स्माइली	</td>	<td>	Pieces	</td>	<td>	15.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	164	</td>	<td>	Dalchini 100 Gm	</td>	<td>	दालचिनी 100 ग्राम	</td>	<td>	Packet	</td>	<td>	65.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	165	</td>	<td>	Dalchini Khulla	</td>	<td>	दल्चिनी खुल्ला	</td>	<td>	Kilogram	</td>	<td>	800.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	166	</td>	<td>	Dalda Ghee	</td>	<td>	डाल्दा घिउ	</td>	<td>	Packet	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	167	</td>	<td>	Dalmoth 10	</td>	<td>	Dalmoth 10	</td>	<td>	Packet	</td>	<td>	10.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	168	</td>	<td>	Dalmoth 400 Gm	</td>	<td>	Dalmoth 400 ग्राम	</td>	<td>	Packet	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	169	</td>	<td>	Dana	</td>	<td>	दाना	</td>	<td>	Bora	</td>	<td>	85.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	170	</td>	<td>	Dant Kanti 100 Gm	</td>	<td>	दन्त कान्ति 100 ग्राम	</td>	<td>	Pieces	</td>	<td>	85.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	171	</td>	<td>	Dant Kanti 200 Gm	</td>	<td>	दन्त कान्ति 200 ग्राम	</td>	<td>	Pieces	</td>	<td>	145.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	172	</td>	<td>	Dant Kanti 75 Gm	</td>	<td>	दन्त कान्ति ७५ ग्राम	</td>	<td>	Pieces	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	173	</td>	<td>	Dant Kanti Red 100 Gm	</td>	<td>	दन्त कान्ति रातो 100 ग्राम	</td>	<td>	Pieces	</td>	<td>	80.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	174	</td>	<td>	Dant Kanti Red 150 Gm	</td>	<td>	दन्त कान्ति रातो 150 ग्राम	</td>	<td>	Pieces	</td>	<td>	140.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	175	</td>	<td>	Dant Kanti Red 175 Gm	</td>	<td>	दन्त कान्ति रातो १७५ ग्राम	</td>	<td>	Pieces	</td>	<td>	145.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	176	</td>	<td>	Dant Kanti Red 75 Gm	</td>	<td>	दन्त कान्ति रातो ७५ ग्राम	</td>	<td>	Pieces	</td>	<td>	80.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	177	</td>	<td>	DAP	</td>	<td>	DAP	</td>	<td>	Kilogram	</td>	<td>	47.900		<td>	-	</td>	       </tr>
+ <tr>	<td>	178	</td>	<td>	Dark Fonesty	</td>	<td>	डार्क फोनेस्टी	</td>	<td>	Packet	</td>	<td>	20.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	179	</td>	<td>	Dermi Cool	</td>	<td>	डर्मी कूल	</td>	<td>	Pieces	</td>	<td>	95.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	180	</td>	<td>	Dew 1.5 Li.	</td>	<td>	ओस १.५ ली।	</td>	<td>	Bottle	</td>	<td>	170.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	181	</td>	<td>	Dew 1 Li.	</td>	<td>	ओस १ ली।	</td>	<td>	Bottle	</td>	<td>	130.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	182	</td>	<td>	Dew 2.25 Li	</td>	<td>	ओस 2.25 ली	</td>	<td>	Bottle	</td>	<td>	245.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	183	</td>	<td>	Dew 600 Ml	</td>	<td>	ओस 600 मिली	</td>	<td>	Bottle	</td>	<td>	85.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	184	</td>	<td>	Dexi Black Hair Shampoo	</td>	<td>	डेक्सी कालो कपाल शैम्पू	</td>	<td>	Pieces	</td>	<td>	55.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	185	</td>	<td>	Dhago-STU	</td>	<td>	धागो-एसटीयू	</td>	<td>	Roll	</td>	<td>	75.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	186	</td>	<td>	Dhaniya 500 Gm	</td>	<td>	धनिया ५०० ग्राम	</td>	<td>	Packet	</td>	<td>	120.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	187	</td>	<td>	Dhara Tori Oil 500Ml	</td>	<td>	धरा तोरी तेल ५०० एमएल	</td>	<td>	Pouch	</td>	<td>	150.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	188	</td>	<td>	Dhika Noon	</td>	<td>	ढिका दिउँसो	</td>	<td>	Kilogram	</td>	<td>	15.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	189	</td>	<td>	Dhoni Soap 250Gm	</td>	<td>	धोनी साबुन 250 ग्राम	</td>	<td>	Pieces	</td>	<td>	60.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	190	</td>	<td>	Dhoni Soap 300Gm	</td>	<td>	धोनी साबुन 300 ग्राम	</td>	<td>	Pieces	</td>	<td>	60.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	191	</td>	<td>	Dhoop Black Fire	</td>	<td>	धुप कालो आगो	</td>	<td>	Packet	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	192	</td>	<td>	Dhulo Dana	</td>	<td>	धुलो दाना	</td>	<td>	Bora	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	193	</td>	<td>	Dhuto	</td>	<td>	धुतो	</td>	<td>	Bora	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	194	</td>	<td>	Digestive Biscuit 15	</td>	<td>	पाचन बिस्कुट 15	</td>	<td>	Pieces	</td>	<td>	20.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	195	</td>	<td>	Donuts	</td>	<td>	डोनट्स	</td>	<td>	Pieces	</td>	<td>	10.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	196	</td>	<td>	Dove Shampu 330 Ml	</td>	<td>	डोभ शम्पु 330 एमएल	</td>	<td>	Pieces	</td>	<td>	280.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	197	</td>	<td>	Ear Cleaning Buds	</td>	<td>	कान सफा गर्ने बडहरू	</td>	<td>	Packet	</td>	<td>	15.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	198	</td>	<td>	Extra Neem Soup	</td>	<td>	अतिरिक्त नीम सूप	</td>	<td>	Pieces	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	199	</td>	<td>	Fanta 2.25 Lit.	</td>	<td>	Fanta 2.25 Lit।	</td>	<td>	Bottle	</td>	<td>	255.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	200	</td>	<td>	Fanta 2 Lit.	</td>	<td>	Fanta 2 Lit।	</td>	<td>	Bottle	</td>	<td>	215.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	201	</td>	<td>	Fapar Pitho	</td>	<td>	फापर पिथो	</td>	<td>	Kilogram	</td>	<td>	200.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	202	</td>	<td>	Fatafat	</td>	<td>	फटाफट	</td>	<td>	Packet	</td>	<td>	20.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	203	</td>	<td>	Fatafat Sabun	</td>	<td>	फटाफट सबुन	</td>	<td>	Pieces	</td>	<td>	55.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	204	</td>	<td>	FF-Egg	</td>	<td>	FF-अण्डा	</td>	<td>	Pieces	</td>	<td>	20.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	205	</td>	<td>	Fizz Soap	</td>	<td>	फिज साबुन	</td>	<td>	Pieces	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	206	</td>	<td>	Furundana	</td>	<td>	फुरुन्डाना	</td>	<td>	Packet	</td>	<td>	125.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	207	</td>	<td>	Gahat	</td>	<td>	गहत	</td>	<td>	Kilogram	</td>	<td>	100.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	208	</td>	<td>	Garam Masala Dibba 100 Gm	</td>	<td>	गरम मसाला डिब्बा 100 ग्राम	</td>	<td>	Batta	</td>	<td>	100.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	209	</td>	<td>	Gaund 100Gm	</td>	<td>	गाउन्ड 100 ग्राम	</td>	<td>	Packet	</td>	<td>	65.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	210	</td>	<td>	Gel Pen	</td>	<td>	जेल पेन	</td>	<td>	Pieces	</td>	<td>	10.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	211	</td>	<td>	GF-Ricebean	</td>	<td>	GF- राइसबीन	</td>	<td>	Packet	</td>	<td>	60.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	212	</td>	<td>	Ghiraula Clause 25gm	</td>	<td>	घिरौला क्लज 25 ग्राम	</td>	<td>	Packet	</td>	<td>	290.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	213	</td>	<td>	Ghiraula New Narayani 10gm	</td>	<td>	घिरौला नयाँ नारायणी १० ग्राम	</td>	<td>	Packet	</td>	<td>	145.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	214	</td>	<td>	Glass Cleaners	</td>	<td>	ग्लास क्लीनरहरू	</td>	<td>	Pieces	</td>	<td>	95.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	215	</td>	<td>	Glucose Biscuit 10	</td>	<td>	ग्लुकोज बिस्कुट 10	</td>	<td>	Pieces	</td>	<td>	10.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	216	</td>	<td>	Gold Flake	</td>	<td>	गोल्ड फ्लेक	</td>	<td>	Batta	</td>	<td>	60.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	217	</td>	<td>	Golu Noodle 30Gm	</td>	<td>	गोलु नूडल ३० ग्राम	</td>	<td>	Kilogram	</td>	<td>	10.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	218	</td>	<td>	Good Day Biscuit	</td>	<td>	शुभ दिन बिस्कुट	</td>	<td>	Packet	</td>	<td>	10.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	219	</td>	<td>	Good Knight Liquid	</td>	<td>	राम्रो नाइट तरल	</td>	<td>	Pieces	</td>	<td>	125.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	220	</td>	<td>	Good Knight With Holder	</td>	<td>	होल्डर संग शुभ नाइट	</td>	<td>	Pieces	</td>	<td>	145.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	221	</td>	<td>	Goodric Long Grain Rice	</td>	<td>	Goodric लामो अन्न चामल	</td>	<td>	Packet	</td>	<td>	200.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	222	</td>	<td>	Gulcose 1 Kg	</td>	<td>	गुल्कोज १ किलो	</td>	<td>	Batta	</td>	<td>	230.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	223	</td>	<td>	Gulcose 500 Gm	</td>	<td>	गुल्कोज ५०० ग्राम	</td>	<td>	Batta	</td>	<td>	170.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	224	</td>	<td>	Gund	</td>	<td>	गुन्ड	</td>	<td>	Packet	</td>	<td>	65.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	225	</td>	<td>	Gyan Chakki Aata 2Kg	</td>	<td>	ज्ञानचक्की आटा २ किलो	</td>	<td>	Packet	</td>	<td>	170.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	226	</td>	<td>	Gyan Chakki Aata 5Kg	</td>	<td>	ज्ञानचक्की आटा ५ केजी	</td>	<td>	Packet	</td>	<td>	370.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	227	</td>	<td>	Hajmola Pudina	</td>	<td>	हाजमोला पुदिना	</td>	<td>	Pieces	</td>	<td>	1.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	228	</td>	<td>	Haldibari Tea 100Gm	</td>	<td>	हल्दिबारी चिया 100 ग्राम	</td>	<td>	Packet	</td>	<td>	60.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	229	</td>	<td>	Haldibari Tea 200Gm	</td>	<td>	हल्दिबारी चिया 200 ग्राम	</td>	<td>	Packet	</td>	<td>	100.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	230	</td>	<td>	Haldibari Tea 500Gm	</td>	<td>	हल्दिबारी चिया ५०० ग्राम	</td>	<td>	Packet	</td>	<td>	250.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	231	</td>	<td>	Haldi Chandan	</td>	<td>	हल्दी चन्दन	</td>	<td>	Pieces	</td>	<td>	70.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	232	</td>	<td>	Haldi Chandan 75gm	</td>	<td>	हल्दी चन्दन ७५ ग्राम	</td>	<td>	Pieces	</td>	<td>	35.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	233	</td>	<td>	Hansplast	</td>	<td>	ह्यान्सप्लास्ट	</td>	<td>	Pieces	</td>	<td>	2.500		<td>	-	</td>	       </tr>
+ <tr>	<td>	234	</td>	<td>	Happy Biscuit	</td>	<td>	शुभ बिस्कुट	</td>	<td>	Packet	</td>	<td>	10.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	235	</td>	<td>	Happy Cookies Biscuit	</td>	<td>	शुभ कुकीज बिस्कुट	</td>	<td>	Packet	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	236	</td>	<td>	Happydent	</td>	<td>	खुशी	</td>	<td>	Pieces	</td>	<td>	2.500		<td>	-	</td>	       </tr>
+ <tr>	<td>	237	</td>	<td>	Hariyo Kerau	</td>	<td>	हरियो केरौ	</td>	<td>	Kilogram	</td>	<td>	215.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	238	</td>	<td>	Harpic	</td>	<td>	हार्पिक	</td>	<td>	Pieces	</td>	<td>	85.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	239	</td>	<td>	Hauser Pen	</td>	<td>	हौसर पेन	</td>	<td>	Pieces	</td>	<td>	20.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	240	</td>	<td>	Himgiri Rice	</td>	<td>	हिमगिरि धान	</td>	<td>	Kilogram	</td>	<td>	56.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	241	</td>	<td>	Hulas Chakki Aata 2Kg	</td>	<td>	हुलास चक्की आटा २ किलो	</td>	<td>	Kilogram	</td>	<td>	170.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	242	</td>	<td>	Hulas Chakki Aata 5Kg	</td>	<td>	हुलास चक्की आटा ५ केजी	</td>	<td>	Packet	</td>	<td>	410.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	243	</td>	<td>	Hurlicks 20 Gm	</td>	<td>	हर्लिक्स २० ग्राम	</td>	<td>	Pieces	</td>	<td>	10.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	244	</td>	<td>	Hurlicks 500 gm	</td>	<td>	हर्लिक्स ५०० ग्राम	</td>	<td>	Pieces	</td>	<td>	425.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	245	</td>	<td>	Hurlicks Light 450 gm	</td>	<td>	हर्लिक्स लाइट 450 ग्राम	</td>	<td>	Pieces	</td>	<td>	530.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	246	</td>	<td>	Ice Pop	</td>	<td>	आइस पप	</td>	<td>	Pieces	</td>	<td>	10.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	247	</td>	<td>	Inno R	</td>	<td>	इनो आर	</td>	<td>	Pieces	</td>	<td>	15.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	248	</td>	<td>	Jackpot Biscuit	</td>	<td>	ज्याकपोट बिस्कुट	</td>	<td>	Pieces	</td>	<td>	10.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	249	</td>	<td>	Jaifal	</td>	<td>	जैफल	</td>	<td>	Pieces	</td>	<td>	6.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	250	</td>	<td>	Jam Cake	</td>	<td>	जाम केक	</td>	<td>	Pieces	</td>	<td>	10.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	251	</td>	<td>	Janai	</td>	<td>	जनाई	</td>	<td>	Mutha	</td>	<td>	115.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	252	</td>	<td>	Jau Pitho 500Gm	</td>	<td>	जाउ पिथो ५०० ग्राम	</td>	<td>	Packet	</td>	<td>	105.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	253	</td>	<td>	Jau Pitho Kancho	</td>	<td>	जाउ पिथो कान्चो	</td>	<td>	Packet	</td>	<td>	105.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	254	</td>	<td>	Jeera 100GM	</td>	<td>	जीरा 100 ग्राम	</td>	<td>	Packet	</td>	<td>	70.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	255	</td>	<td>	Jeera 500 Gm Pkt	</td>	<td>	जीरा 500 ग्राम Pkt	</td>	<td>	Packet	</td>	<td>	385.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	256	</td>	<td>	Jeera 50Gm	</td>	<td>	जिरा ५० ग्राम	</td>	<td>	Packet	</td>	<td>	60.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	257	</td>	<td>	Jeera Biscuit	</td>	<td>	जिरा बिस्कुट	</td>	<td>	Packet	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	258	</td>	<td>	Jeli	</td>	<td>	जेली	</td>	<td>	Pieces	</td>	<td>	10.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	259	</td>	<td>	Jhilimili Batti 12	</td>	<td>	झिलिमिली बत्ती १२	</td>	<td>	Pieces	</td>	<td>	150.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	260	</td>	<td>	Jhilimili Batti 32	</td>	<td>	झिलिमिली बत्ती ३२	</td>	<td>	Pieces	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	261	</td>	<td>	Jhilimili Batti 40	</td>	<td>	झिलिमिली बत्ती ४०	</td>	<td>	Pieces	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	262	</td>	<td>	Jhilimili Batti 70	</td>	<td>	झिलिमिली बत्ती ७०	</td>	<td>	Pieces	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	263	</td>	<td>	Jillst Blade	</td>	<td>	Jillst ब्लेड	</td>	<td>	Packet	</td>	<td>	25.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	264	</td>	<td>	Jira 20	</td>	<td>	जिरा २०	</td>	<td>	Packet	</td>	<td>	20.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	265	</td>	<td>	Juneli Masoor Dal	</td>	<td>	जुनेली मसूर दल	</td>	<td>	Kilogram	</td>	<td>	150.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	266	</td>	<td>	Jwanu 100 Gm	</td>	<td>	ज्वानु 100 ग्राम	</td>	<td>	Packet	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	267	</td>	<td>	Jwanu 50 Gm	</td>	<td>	ज्वानु ५० ग्राम	</td>	<td>	Packet	</td>	<td>	30.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	268	</td>	<td>	Kabeli Chana	</td>	<td>	काबेली चना	</td>	<td>	Kilogram	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	269	</td>	<td>	Kaju 100 Gm	</td>	<td>	काजु 100 ग्राम	</td>	<td>	Packet	</td>	<td>	135.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	270	</td>	<td>	Kaju 80Gm	</td>	<td>	काजु ८० ग्राम	</td>	<td>	Packet	</td>	<td>	135.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	271	</td>	<td>	Kaju Biscuit	</td>	<td>	काजु बिस्कुट	</td>	<td>	Pieces	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	272	</td>	<td>	Kakro Glossy	</td>	<td>	काक्रो ग्लोसी	</td>	<td>	Packet	</td>	<td>	420.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	273	</td>	<td>	Kakro  Malini	</td>	<td>	काक्रो मालिनी	</td>	<td>	Packet	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	274	</td>	<td>	Kakro Ragini 10gm	</td>	<td>	काक्रो रागिनी 10 ग्राम	</td>	<td>	Pieces	</td>	<td>	345.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	275	</td>	<td>	Kalo Tep	</td>	<td>	कालो टेप	</td>	<td>	Pieces	</td>	<td>	20.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	276	</td>	<td>	Kanak Dhoop 100	</td>	<td>	कनक धूप १००	</td>	<td>	Packet	</td>	<td>	100.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	277	</td>	<td>	Kanak Dhoop 50	</td>	<td>	कनक धूप ५०	</td>	<td>	Packet	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	278	</td>	<td>	Kanchanganga Dhup 100	</td>	<td>	कञ्चनगंगा धुप १००	</td>	<td>	Packet	</td>	<td>	100.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	279	</td>	<td>	Kanchangangha Dhup	</td>	<td>	कञ्चनगङ्घा धुप	</td>	<td>	Packet	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	280	</td>	<td>	Kancho Til 1kg	</td>	<td>	कान्चो तिल 1 किलो	</td>	<td>	Packet	</td>	<td>	500.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	281	</td>	<td>	Kancho Til 500 gm	</td>	<td>	कान्चो तिल ५०० ग्राम	</td>	<td>	Packet	</td>	<td>	250.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	282	</td>	<td>	Kapur	</td>	<td>	कपुर	</td>	<td>	Batta	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	283	</td>	<td>	Karela Pali 50gm	</td>	<td>	करेला पाली ५० ग्राम	</td>	<td>	Packet	</td>	<td>	995.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	284	</td>	<td>	Kashmiri Mirch MDH	</td>	<td>	कश्मीरी मिर्च MDH	</td>	<td>	Packet	</td>	<td>	110.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	285	</td>	<td>	Kasoori Methi 50 Gm	</td>	<td>	कसुरी मेथी ५० ग्राम	</td>	<td>	Packet	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	286	</td>	<td>	Kavreli Rice	</td>	<td>	काभ्रेली चामल	</td>	<td>	Kilogram	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	287	</td>	<td>	Keshari Damaru 200 Gm	</td>	<td>	केशरी डमरु 200 ग्राम	</td>	<td>	Packet	</td>	<td>	25.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	288	</td>	<td>	Khairo Til  khulla	</td>	<td>	खैरो तिल खुल्ला	</td>	<td>	Kilogram	</td>	<td>	500.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	289	</td>	<td>	Khajuri Butter	</td>	<td>	खजुरी बटर	</td>	<td>	Packet	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	290	</td>	<td>	Khajurico Puff	</td>	<td>	खजुरिको पफ	</td>	<td>	Packet	</td>	<td>	70.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	291	</td>	<td>	Khukuri Filter 20 Hi	</td>	<td>	खुकुरी फिल्टर २० नमस्ते	</td>	<td>	Batta	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	292	</td>	<td>	Khulla Bhuja	</td>	<td>	खुल्ला भुजा	</td>	<td>	Kilogram	</td>	<td>	100.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	293	</td>	<td>	Khursani 100 Gm	</td>	<td>	खुर्सानी १०० ग्राम	</td>	<td>	Packet	</td>	<td>	90.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	294	</td>	<td>	Khursani Dhulo 500Gm	</td>	<td>	खुर्सानी धुलो ५०० ग्राम	</td>	<td>	Packet	</td>	<td>	280.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	295	</td>	<td>	Khursani Dhulo KSP 100 Gm	</td>	<td>	खुर्सानी धुलो KSP 100 ग्राम	</td>	<td>	Packet	</td>	<td>	90.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	296	</td>	<td>	Khursani Dhulo SMU 100 Gm	</td>	<td>	खुर्सानी धुलो SMU 100 ग्राम	</td>	<td>	Packet	</td>	<td>	90.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	297	</td>	<td>	Khursani Dhulo SMU 50 Gm	</td>	<td>	खुर्सानी धुलो एसएमयू ५० ग्राम	</td>	<td>	Packet	</td>	<td>	45.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	298	</td>	<td>	Kismis 80 Gm	</td>	<td>	किसिम 80 ग्राम	</td>	<td>	Pieces	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	299	</td>	<td>	Kitkat 20	</td>	<td>	Kitkat 20	</td>	<td>	Pieces	</td>	<td>	20.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	300	</td>	<td>	Kitkat 40	</td>	<td>	Kitkat 40	</td>	<td>	Pieces	</td>	<td>	40.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	301	</td>	<td>	Kitkat 70	</td>	<td>	Kitkat 70	</td>	<td>	Pieces	</td>	<td>	60.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	302	</td>	<td>	Kodo Pitho	</td>	<td>	कोडो पिथो	</td>	<td>	Kilogram	</td>	<td>	90.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	303	</td>	<td>	Kurkure 23 Gm	</td>	<td>	कुरकुरे २३ ग्राम	</td>	<td>	Packet	</td>	<td>	20.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	304	</td>	<td>	Kurkure 30	</td>	<td>	कुरकुरे ३०	</td>	<td>	Packet	</td>	<td>	30.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	305	</td>	<td>	Kwality Soap 250 Gm	</td>	<td>	क्वालिटी साबुन 250 ग्राम	</td>	<td>	Pieces	</td>	<td>	55.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	306	</td>	<td>	Kwality Soap 300 Gm	</td>	<td>	क्वालिटी साबुन 300 ग्राम	</td>	<td>	Pieces	</td>	<td>	65.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	307	</td>	<td>	Ladduan Bhog Rice	</td>	<td>	लड्डुन भोग चामल	</td>	<td>	Kilogram	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	308	</td>	<td>	Lalipop	</td>	<td>	लालिपप	</td>	<td>	Pieces	</td>	<td>	5.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	309	</td>	<td>	Lasun	</td>	<td>	लासुन	</td>	<td>	Kilogram	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	310	</td>	<td>	Lauka Balwant	</td>	<td>	लौका बलवन्त	</td>	<td>	Packet	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	311	</td>	<td>	Led Roating Lamp	</td>	<td>	एलईडी रोटिंग बत्ती	</td>	<td>	Pieces	</td>	<td>	400.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	312	</td>	<td>	Lia Dhup	</td>	<td>	लिया धुप	</td>	<td>	Packet	</td>	<td>	30.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	313	</td>	<td>	Lifebuoy Arya Red	</td>	<td>	Lifebuoy आर्य रातो	</td>	<td>	Pieces	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	314	</td>	<td>	Lifebuoy Care Arya	</td>	<td>	Lifebuoy केयर आर्य	</td>	<td>	Pieces	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	315	</td>	<td>	Lifebuoy Handwash	</td>	<td>	Lifebuoy ह्यान्डवॉश	</td>	<td>	Pieces	</td>	<td>	95.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	316	</td>	<td>	Lifebuoy Lemon Fresh	</td>	<td>	Lifebuoy लेमन ताजा	</td>	<td>	Pieces	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	317	</td>	<td>	Lifebuoy Nature Arya	</td>	<td>	Lifebuoy प्रकृति आर्य	</td>	<td>	Pieces	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	318	</td>	<td>	Lighter Lamp	</td>	<td>	हल्का बत्ती	</td>	<td>	Pieces	</td>	<td>	15.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	319	</td>	<td>	Lion Soap 200Gm	</td>	<td>	शेर साबुन 200 ग्राम	</td>	<td>	Pieces	</td>	<td>	45.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	320	</td>	<td>	Liquid Pitambari	</td>	<td>	तरल पीताम्बरी	</td>	<td>	Bottle	</td>	<td>	100.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	321	</td>	<td>	Liquid Soap	</td>	<td>	तरल साबुन	</td>	<td>	Bottle	</td>	<td>	100.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	322	</td>	<td>	Liril Sabun	</td>	<td>	लिरिल सबुन	</td>	<td>	Pieces	</td>	<td>	40.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	323	</td>	<td>	Litchi  Juice	</td>	<td>	लिचीको रस	</td>	<td>	Bottle	</td>	<td>	20.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	324	</td>	<td>	Lotte chocoliebe Chocolate	</td>	<td>	लोटे चकोलिबे चकलेट	</td>	<td>	Pieces	</td>	<td>	5.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	325	</td>	<td>	Lotte Choco Pie	</td>	<td>	लोटे चोको पाई	</td>	<td>	Pieces	</td>	<td>	25.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	326	</td>	<td>	Lux F 95G	</td>	<td>	लक्स एफ ९५जी	</td>	<td>	Pieces	</td>	<td>	45.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	327	</td>	<td>	Lux P 95G	</td>	<td>	लक्स पी 95 जी	</td>	<td>	Pieces	</td>	<td>	45.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	328	</td>	<td>	Lux W 95G	</td>	<td>	लक्स W 95G	</td>	<td>	Pieces	</td>	<td>	55.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	329	</td>	<td>	Lwang 50 Gm	</td>	<td>	ल्वाङ ५० ग्राम	</td>	<td>	Packet	</td>	<td>	100.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	330	</td>	<td>	Lwang Khulla	</td>	<td>	ल्वाङ खुल्ला	</td>	<td>	Kilogram	</td>	<td>	2400.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	331	</td>	<td>	Lwang Sano Pkt	</td>	<td>	Lwang Sano Pkt	</td>	<td>	Packet	</td>	<td>	10.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	332	</td>	<td>	Maanshree Aata 2kg	</td>	<td>	मानश्री आटा २ किलो	</td>	<td>	Packet	</td>	<td>	170.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	333	</td>	<td>	Machad Dhup Rapt	</td>	<td>	मछड धुप राप्ट	</td>	<td>	Packet	</td>	<td>	10.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	334	</td>	<td>	Maida 1 Kg	</td>	<td>	मैदा १ केजी	</td>	<td>	Packet	</td>	<td>	85.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	335	</td>	<td>	Maida Khulla	</td>	<td>	मैदा खुल्ला	</td>	<td>	Kilogram	</td>	<td>	70.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	336	</td>	<td>	Main Batti	</td>	<td>	मुख्य बत्ती	</td>	<td>	Packet	</td>	<td>	40.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	337	</td>	<td>	Makai 97 Gold	</td>	<td>	मकाई 97 सुन	</td>	<td>	Kilogram	</td>	<td>	525.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	338	</td>	<td>	Makhana	</td>	<td>	मखाना	</td>	<td>	Kilogram	</td>	<td>	1400.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	339	</td>	<td>	Makhhankhor Jira Rice	</td>	<td>	माखनखोर जिरा चामल	</td>	<td>	Kilogram	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	340	</td>	<td>	Mala 1 No	</td>	<td>	माला १ नं	</td>	<td>	Pieces	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	341	</td>	<td>	Mala 2 No	</td>	<td>	माला २ नं	</td>	<td>	Pieces	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	342	</td>	<td>	Mala 3 No	</td>	<td>	माला ३ नं	</td>	<td>	Pieces	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	343	</td>	<td>	Malmal	</td>	<td>	मलमल	</td>	<td>	Packet	</td>	<td>	20.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	344	</td>	<td>	Manaco Biscuit	</td>	<td>	मनाको बिस्कुट	</td>	<td>	Packet	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	345	</td>	<td>	Manaco Biscuit 10	</td>	<td>	मनाको बिस्कुट 10	</td>	<td>	Pieces	</td>	<td>	10.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	346	</td>	<td>	Marich 100 Gm	</td>	<td>	मारिच 100 ग्राम	</td>	<td>	Packet	</td>	<td>	110.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	347	</td>	<td>	Marich 50 Gm	</td>	<td>	मारिच 50 ग्राम	</td>	<td>	Packet	</td>	<td>	65.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	348	</td>	<td>	Marich Sano Pkt	</td>	<td>	मारिच सानो Pkt	</td>	<td>	Packet	</td>	<td>	10.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	349	</td>	<td>	Marie Biscuit	</td>	<td>	मारी बिस्कुट	</td>	<td>	Pieces	</td>	<td>	10.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	350	</td>	<td>	Marie Biscuit 60	</td>	<td>	मेरी बिस्कुट 60	</td>	<td>	Pieces	</td>	<td>	60.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	351	</td>	<td>	Marker Permanent	</td>	<td>	मार्कर स्थायी	</td>	<td>	Pieces	</td>	<td>	40.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	352	</td>	<td>	Mas	</td>	<td>	मास	</td>	<td>	Kilogram	</td>	<td>	180.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	353	</td>	<td>	Masala Stick 40	</td>	<td>	मसाला स्टिक ४०	</td>	<td>	Packet	</td>	<td>	40.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	354	</td>	<td>	Mas Dal	</td>	<td>	मास दाल	</td>	<td>	Kilogram	</td>	<td>	200.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	355	</td>	<td>	Maseura 200 Gm	</td>	<td>	मासेउरा 200 ग्राम	</td>	<td>	Packet	</td>	<td>	40.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	356	</td>	<td>	Maseura Khulla	</td>	<td>	मसुरा खुल्ला	</td>	<td>	Kilogram	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	357	</td>	<td>	Max Colget 150 Gm	</td>	<td>	अधिकतम कोलगेट 150 ग्राम	</td>	<td>	Pieces	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	358	</td>	<td>	Max Colget 19 Gm	</td>	<td>	अधिकतम कोलगेट 19 ग्राम	</td>	<td>	Pieces	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	359	</td>	<td>	Max Colget 70 Gm	</td>	<td>	अधिकतम कोलगेट 70 ग्राम	</td>	<td>	Pieces	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	360	</td>	<td>	MDH Curry Powder	</td>	<td>	MDH करी पाउडर	</td>	<td>	Packet	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	361	</td>	<td>	MDH Garam Masala	</td>	<td>	MDH गरम मसाला	</td>	<td>	Packet	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	362	</td>	<td>	MDH Kasuuri Methi	</td>	<td>	एमडीएच कसुरी मेथी	</td>	<td>	Packet	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	363	</td>	<td>	MDH Mixed Masala	</td>	<td>	MDH मिश्रित मसाला	</td>	<td>	Packet	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	364	</td>	<td>	Mesaura 200 Gm	</td>	<td>	मेसौरा 200 ग्राम	</td>	<td>	Packet	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	365	</td>	<td>	Methi 100 Gm	</td>	<td>	मेथी 100 ग्राम	</td>	<td>	Packet	</td>	<td>	30.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	366	</td>	<td>	Methi 200Gm	</td>	<td>	मेथी 200 ग्राम	</td>	<td>	Packet	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	367	</td>	<td>	Mirinda 2.5 Li	</td>	<td>	मिरिन्डा २.५ ली	</td>	<td>	Pieces	</td>	<td>	245.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	368	</td>	<td>	Mirinda Orange 1Li	</td>	<td>	मिरिन्डा ओरेन्ज १ ली	</td>	<td>	Bottle	</td>	<td>	120.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	369	</td>	<td>	Misri	</td>	<td>	मिश्री	</td>	<td>	Kilogram	</td>	<td>	180.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	370	</td>	<td>	Mix Dry Fruits	</td>	<td>	ड्राई फ्रुट्स मिलाउनुहोस्	</td>	<td>	Packet	</td>	<td>	70.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	371	</td>	<td>	Mixed Veg Soup	</td>	<td>	मिश्रित तरकारी सूप	</td>	<td>	Packet	</td>	<td>	80.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	372	</td>	<td>	Mix Masala KSP 100 Gm	</td>	<td>	मसाला KSP 100 ग्राम मिलाउनुहोस्	</td>	<td>	Packet	</td>	<td>	75.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	373	</td>	<td>	Mix Masala KSP 200 Gm	</td>	<td>	मसाला KSP 200 ग्राम मिलाउनुहोस्	</td>	<td>	Packet	</td>	<td>	120.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	374	</td>	<td>	MIx Masala KSP 500 GM	</td>	<td>	मिक्स मसाला KSP 500 GM	</td>	<td>	Packet	</td>	<td>	280.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	375	</td>	<td>	Mix Masala SMU 100 Gm	</td>	<td>	मसाला एसएमयू १०० ग्राम मिलाउनुहोस्	</td>	<td>	Packet	</td>	<td>	80.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	376	</td>	<td>	Mix Masala SMU 200 Gm	</td>	<td>	मिक्स मसाला SMU 200 Gm	</td>	<td>	Packet	</td>	<td>	170.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	377	</td>	<td>	Mix Masala SMU 500 Gm	</td>	<td>	मसाला एसएमयू ५०० ग्राम मिलाउनुहोस्	</td>	<td>	Packet	</td>	<td>	385.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	378	</td>	<td>	Mix Masala SMU 50 Gm	</td>	<td>	मसाला एसएमयू ५० ग्राम मिलाउनुहोस्	</td>	<td>	Packet	</td>	<td>	40.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	379	</td>	<td>	MM-Egg	</td>	<td>	एमएम-अण्डा	</td>	<td>	Pieces	</td>	<td>	20.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	380	</td>	<td>	Momo Masala	</td>	<td>	मोमो मसाला	</td>	<td>	Packet	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	381	</td>	<td>	Mong Dalmoth	</td>	<td>	मोङ डाल्मोथ	</td>	<td>	Packet	</td>	<td>	215.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	382	</td>	<td>	Moong Dal	</td>	<td>	मुग दाल	</td>	<td>	Kilogram	</td>	<td>	180.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	383	</td>	<td>	Moong Khosta Dal	</td>	<td>	मुङ खोस्ता दल	</td>	<td>	Kilogram	</td>	<td>	170.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	384	</td>	<td>	Mulching Heavy Weight	</td>	<td>	Mulching भारी वजन	</td>	<td>	Roll	</td>	<td>	3750.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	385	</td>	<td>	Mulching Light Weight	</td>	<td>	Mulching हल्का वजन	</td>	<td>	Pieces	</td>	<td>	3600.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	386	</td>	<td>	Murali Makai	</td>	<td>	मुरली मकई	</td>	<td>	Kilogram	</td>	<td>	165.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	387	</td>	<td>	Mushroom Soup	</td>	<td>	मशरूम सूप	</td>	<td>	Packet	</td>	<td>	80.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	388	</td>	<td>	Napkin Paper	</td>	<td>	नेपकिन पेपर	</td>	<td>	Pieces	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	389	</td>	<td>	Nariwal	</td>	<td>	नारिवाल	</td>	<td>	Kilogram	</td>	<td>	500.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	390	</td>	<td>	Nauni Ghee	</td>	<td>	नौनी घिउ	</td>	<td>	Kilogram	</td>	<td>	1090.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	391	</td>	<td>	NC-Bean 100	</td>	<td>	NC-बीन 100	</td>	<td>	Packet	</td>	<td>	100.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	392	</td>	<td>	NC-Bean 50	</td>	<td>	NC-बीन 50	</td>	<td>	Packet	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	393	</td>	<td>	Neem Kanti	</td>	<td>	नीम कान्ति	</td>	<td>	Pieces	</td>	<td>	70.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	394	</td>	<td>	Neem Kanti 75gm	</td>	<td>	नीम कान्ति ७५ ग्राम	</td>	<td>	Pieces	</td>	<td>	35.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	395	</td>	<td>	New Popular Detergent Cake	</td>	<td>	नयाँ लोकप्रिय डिटर्जेंट केक	</td>	<td>	Pieces	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	396	</td>	<td>	Nimkin Sano	</td>	<td>	निमकिन सानो	</td>	<td>	Packet	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	397	</td>	<td>	Nimkin Shahi 50	</td>	<td>	निमकीन शाही ५०	</td>	<td>	Packet	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	398	</td>	<td>	NT-Bean 100	</td>	<td>	NT-बीन 100	</td>	<td>	Packet	</td>	<td>	100.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	399	</td>	<td>	NT-Bean 50	</td>	<td>	NT-बीन 50	</td>	<td>	Packet	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	400	</td>	<td>	Nursery Tray 105 Hole	</td>	<td>	नर्सरी ट्रे 105 होल	</td>	<td>	Pieces	</td>	<td>	65.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	401	</td>	<td>	Nursery Tray 50 Hole	</td>	<td>	नर्सरी ट्रे 50 होल	</td>	<td>	Pieces	</td>	<td>	65.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	402	</td>	<td>	Nycil 178Gm	</td>	<td>	Nycil 178Gm	</td>	<td>	Pieces	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	403	</td>	<td>	Oats 1 Kg	</td>	<td>	ओट्स 1 किलो	</td>	<td>	Batta	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	404	</td>	<td>	Oats 500gm	</td>	<td>	ओट्स 500 ग्राम	</td>	<td>	Batta	</td>	<td>	250.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	405	</td>	<td>	Odonil	</td>	<td>	ओडोनिल	</td>	<td>	Pieces	</td>	<td>	70.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	406	</td>	<td>	Okhar	</td>	<td>	ओखर	</td>	<td>	Kilogram	</td>	<td>	500.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	407	</td>	<td>	Oreo Biscuit	</td>	<td>	ओरियो बिस्कुट	</td>	<td>	Packet	</td>	<td>	25.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	408	</td>	<td>	Oryza Rice	</td>	<td>	ओरिजा चामल	</td>	<td>	Kilogram	</td>	<td>	84.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	409	</td>	<td>	Paani Diyo	</td>	<td>	पानी दीयो	</td>	<td>	Pieces	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	410	</td>	<td>	Paanipuri	</td>	<td>	पानीपुरी	</td>	<td>	Kilogram	</td>	<td>	200.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	411	</td>	<td>	Paanipuri 200Gm	</td>	<td>	पानीपुरी 200 ग्राम	</td>	<td>	Packet	</td>	<td>	100.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	412	</td>	<td>	Paapad 150 Gm	</td>	<td>	पापड 150 ग्राम	</td>	<td>	Pieces	</td>	<td>	90.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	413	</td>	<td>	Paapad 200 Gm	</td>	<td>	पापड 200 ग्राम	</td>	<td>	Packet	</td>	<td>	100.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	414	</td>	<td>	Paapad 250 Gm	</td>	<td>	पापड 250 ग्राम	</td>	<td>	Pieces	</td>	<td>	125.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	415	</td>	<td>	Paapad 400Gm	</td>	<td>	पापड 400 ग्राम	</td>	<td>	Packet	</td>	<td>	200.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	416	</td>	<td>	PAC 801 1Kg	</td>	<td>	PAC 801 1Kg	</td>	<td>	Packet	</td>	<td>	545.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	417	</td>	<td>	Paluwa Dishwash 200Gm	</td>	<td>	पलुवा डिशवाश 200 ग्राम	</td>	<td>	Pieces	</td>	<td>	20.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	418	</td>	<td>	Paluwa Soap 200Gm	</td>	<td>	पलुवा साबुन 200 ग्राम	</td>	<td>	Pieces	</td>	<td>	45.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	419	</td>	<td>	Paneer	</td>	<td>	पनीर	</td>	<td>	Kilogram	</td>	<td>	870.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	420	</td>	<td>	Paneer 500Gm	</td>	<td>	पनीर 500 ग्राम	</td>	<td>	Pieces	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	421	</td>	<td>	Paneer Masala MDH	</td>	<td>	पनीर मसाला एमडीएच	</td>	<td>	Packet	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	422	</td>	<td>	Panipuri Masala	</td>	<td>	पानीपुरी मसाला	</td>	<td>	Packet	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	423	</td>	<td>	Pap	</td>	<td>	पप	</td>	<td>	Packet	</td>	<td>	55.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	424	</td>	<td>	Paper Gilas	</td>	<td>	पेपर गिलास	</td>	<td>	Pieces	</td>	<td>	2.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	425	</td>	<td>	Paper Plate	</td>	<td>	पेपर प्लेट	</td>	<td>	Packet	</td>	<td>	95.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	426	</td>	<td>	Parle-G Biscuit	</td>	<td>	पार्ले-जी बिस्कुट	</td>	<td>	Packet	</td>	<td>	10.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	427	</td>	<td>	Pasta	</td>	<td>	पास्ता	</td>	<td>	Kilogram	</td>	<td>	100.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	428	</td>	<td>	Pasta 400Gm	</td>	<td>	पास्ता 400 ग्राम	</td>	<td>	Packet	</td>	<td>	110.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	429	</td>	<td>	Pathak Dalmoth	</td>	<td>	पाठक दलमोथ	</td>	<td>	Packet	</td>	<td>	85.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	430	</td>	<td>	Pauroti Sano	</td>	<td>	पौरोती सानो	</td>	<td>	Packet	</td>	<td>	25.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	431	</td>	<td>	Pauroti Thulo	</td>	<td>	पौरोती थुलो	</td>	<td>	Packet	</td>	<td>	120.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	432	</td>	<td>	Peatmoss 30/70	</td>	<td>	पीटमोस 30/70	</td>	<td>	Kilogram	</td>	<td>	10.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	433	</td>	<td>	Pencil	</td>	<td>	पेन्सिल	</td>	<td>	Pieces	</td>	<td>	125.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	434	</td>	<td>	Pepsi 1 Li	</td>	<td>	पेप्सी १ ली	</td>	<td>	Bottle	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	435	</td>	<td>	Pepsodent 175G Agni	</td>	<td>	Pepsodent 175G अग्नि	</td>	<td>	Pieces	</td>	<td>	105.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	436	</td>	<td>	Pepsodent 80G Agni	</td>	<td>	Pepsodent 80G अग्नि	</td>	<td>	Pieces	</td>	<td>	55.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	437	</td>	<td>	Pepsodent Herbal 175G	</td>	<td>	Pepsodent हर्बल 175G	</td>	<td>	Pieces	</td>	<td>	130.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	438	</td>	<td>	Pepsodent Herbal 80G	</td>	<td>	Pepsodent हर्बल 80G	</td>	<td>	Pieces	</td>	<td>	60.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	439	</td>	<td>	Pilot Filter 20 HI	</td>	<td>	पायलट फिल्टर 20 HI	</td>	<td>	Batta	</td>	<td>	120.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	440	</td>	<td>	Pio	</td>	<td>	पियो	</td>	<td>	Packet	</td>	<td>	5.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	441	</td>	<td>	Pista 80 Gm	</td>	<td>	पिस्ता ८० ग्राम	</td>	<td>	Packet	</td>	<td>	180.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	442	</td>	<td>	Pitambari	</td>	<td>	पिताम्बरी	</td>	<td>	Packet	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	443	</td>	<td>	Plastic Bag	</td>	<td>	प्लास्टिक झोला	</td>	<td>	Kilogram	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	444	</td>	<td>	Plastic Bag Sajilo	</td>	<td>	प्लास्टिकको झोला सजिलो	</td>	<td>	Kilogram	</td>	<td>	325.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	445	</td>	<td>	Plastic Chamcha	</td>	<td>	प्लास्टिक चम्चा	</td>	<td>	Packet	</td>	<td>	90.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	446	</td>	<td>	Plastic Dori	</td>	<td>	प्लास्टिक डोरी	</td>	<td>	Kilogram	</td>	<td>	120.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	447	</td>	<td>	Plastic Dori 2	</td>	<td>	प्लास्टिक डोरी २	</td>	<td>	Kilogram	</td>	<td>	150.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	448	</td>	<td>	Plastic Dori Black Super	</td>	<td>	प्लास्टिक डोरी कालो सुपर	</td>	<td>	Kilogram	</td>	<td>	175.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	449	</td>	<td>	Plastic Gilas	</td>	<td>	प्लास्टिक गिलास	</td>	<td>	Pieces	</td>	<td>	1.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	450	</td>	<td>	Plastic Gilas Sano	</td>	<td>	प्लास्टिक गिलास सानो	</td>	<td>	Pieces	</td>	<td>	0.700		<td>	-	</td>	       </tr>
+ <tr>	<td>	451	</td>	<td>	Plastic Kachaura	</td>	<td>	प्लास्टिक कचौरा	</td>	<td>	Packet	</td>	<td>	95.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	452	</td>	<td>	Plastic Khande Thaal	</td>	<td>	प्लास्टिक खान्दे थाल	</td>	<td>	Pieces	</td>	<td>	10.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	453	</td>	<td>	Plastic Raincoat	</td>	<td>	प्लास्टिक रेनकोट	</td>	<td>	Pieces	</td>	<td>	325.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	454	</td>	<td>	Plastic Raincoat Full	</td>	<td>	प्लास्टिक रेनकोट पूर्ण	</td>	<td>	Pieces	</td>	<td>	450.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	455	</td>	<td>	Popular Quality 1Kg	</td>	<td>	लोकप्रिय गुणस्तर 1Kg	</td>	<td>	Packet	</td>	<td>	110.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	456	</td>	<td>	Popular Quality 500Gm	</td>	<td>	लोकप्रिय गुणस्तर 500Gm	</td>	<td>	Packet	</td>	<td>	60.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	457	</td>	<td>	Popular Quality 750Gm	</td>	<td>	लोकप्रिय गुणस्तर 750Gm	</td>	<td>	Packet	</td>	<td>	85.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	458	</td>	<td>	Potash	</td>	<td>	पोटास	</td>	<td>	Kilogram	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	459	</td>	<td>	Potata Biscuit	</td>	<td>	आलु बिस्कुट	</td>	<td>	Packet	</td>	<td>	40.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	460	</td>	<td>	Potata Biscuit 50	</td>	<td>	आलु बिस्कुट ५०	</td>	<td>	Packet	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	461	</td>	<td>	Potato	</td>	<td>	आलु	</td>	<td>	Kilogram	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	462	</td>	<td>	Potato New	</td>	<td>	आलु नयाँ	</td>	<td>	Kilogram	</td>	<td>	70.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	463	</td>	<td>	Praun	</td>	<td>	प्रुन	</td>	<td>	Packet	</td>	<td>	35.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	464	</td>	<td>	Premium Sinke Dhoop	</td>	<td>	प्रिमियम सिंक धूप	</td>	<td>	Packet	</td>	<td>	100.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	465	</td>	<td>	Protsahan Tea 100GM	</td>	<td>	Protsahan चिया 100GM	</td>	<td>	Packet	</td>	<td>	60.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	466	</td>	<td>	Protsahan Tea 200GM	</td>	<td>	Protsahan चिया 200GM	</td>	<td>	Packet	</td>	<td>	110.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	467	</td>	<td>	Protsahan Tea 500GM	</td>	<td>	Protsahan चिया 500GM	</td>	<td>	Packet	</td>	<td>	250.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	468	</td>	<td>	PT-Turmeric	</td>	<td>	PT- हल्दी	</td>	<td>	Packet	</td>	<td>	120.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	469	</td>	<td>	Puja Sabun 200Gm	</td>	<td>	पुजा सबुन 200 ग्राम	</td>	<td>	Pieces	</td>	<td>	45.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	470	</td>	<td>	Puja Sabun 40	</td>	<td>	पुजा सबुन ४०	</td>	<td>	Pieces	</td>	<td>	40.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	471	</td>	<td>	Puja Sabun 50l	</td>	<td>	पुजा सबुन ५० लि	</td>	<td>	Pieces	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	472	</td>	<td>	Puja Supari	</td>	<td>	पुजा सुपारी	</td>	<td>	Pieces	</td>	<td>	5.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	473	</td>	<td>	Pyaj	</td>	<td>	प्याज	</td>	<td>	Kilogram	</td>	<td>	90.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	474	</td>	<td>	Qwati 1 Kg	</td>	<td>	क्वाती १ किलो	</td>	<td>	Packet	</td>	<td>	200.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	475	</td>	<td>	Qwati 500 Gm.	</td>	<td>	क्वाती ५०० ग्राम	</td>	<td>	Packet	</td>	<td>	100.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	476	</td>	<td>	Raajma	</td>	<td>	राजमा	</td>	<td>	Kilogram	</td>	<td>	245.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	477	</td>	<td>	Raajma 11.5-25K	</td>	<td>	राजमा 11.5-25K	</td>	<td>	Packet	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	478	</td>	<td>	Raajma 12.5-25K	</td>	<td>	राजमा 12.5-25K	</td>	<td>	Packet	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	479	</td>	<td>	Rahar Dal	</td>	<td>	राहर दल	</td>	<td>	Kilogram	</td>	<td>	315.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	480	</td>	<td>	Rajkumar Corn Seeds	</td>	<td>	राजकुमार मकैको बीउ	</td>	<td>	Kilogram	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	481	</td>	<td>	Rangeela Dalmoth 600gm	</td>	<td>	रंगीला डाल्मोथ 600 ग्राम	</td>	<td>	Packet	</td>	<td>	180.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	482	</td>	<td>	Rara Noodles	</td>	<td>	रारा नूडल्स	</td>	<td>	Packet	</td>	<td>	20.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	483	</td>	<td>	Record File	</td>	<td>	रेकर्ड फाइल	</td>	<td>	Pieces	</td>	<td>	10.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	484	</td>	<td>	RedBull Energy Drink	</td>	<td>	RedBull ऊर्जा पेय	</td>	<td>	can	</td>	<td>	80.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	485	</td>	<td>	Rice Jira Aayush	</td>	<td>	धान जिरा आयुष	</td>	<td>	Kilogram	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	486	</td>	<td>	Rice Jira Pearl	</td>	<td>	चामल जिरा मोती	</td>	<td>	Kilogram	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	487	</td>	<td>	Rice Longgrain Jagat 1 Kg	</td>	<td>	चामल लङ्गग्रेन जगत 1 किलो	</td>	<td>	Packet	</td>	<td>	200.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	488	</td>	<td>	Rice Longgrain Newari 1 Kg	</td>	<td>	चामल लङ्गग्रेन नेवारी १ किलो	</td>	<td>	Packet	</td>	<td>	200.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	489	</td>	<td>	Rice Longgrain Newari 20 kg	</td>	<td>	चामल लङ्गग्रेन नेवारी २० किलो	</td>	<td>	Bora	</td>	<td>	185.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	490	</td>	<td>	Rice Longgrain Newari 5 Kg	</td>	<td>	चामल लङ्गग्रेन नेवारी ५ केजी	</td>	<td>	Packet	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	491	</td>	<td>	Rice Pansari	</td>	<td>	चामल पंसारी	</td>	<td>	Packet	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	492	</td>	<td>	Rice Sabitri	</td>	<td>	चामल सावित्री	</td>	<td>	Kilogram	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	493	</td>	<td>	Rice Sonam Jagat	</td>	<td>	चामल सोनम जगत	</td>	<td>	Kilogram	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	494	</td>	<td>	Rice Sonam Mama Bhanja	</td>	<td>	चामल सोनम मामा भान्जा	</td>	<td>	Kilogram	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	495	</td>	<td>	Rice Sonam Sonashakti 20Kg	</td>	<td>	चामल सोनम सोनशक्ति २० केजी	</td>	<td>	Kilogram	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	496	</td>	<td>	Rice Sona Naya	</td>	<td>	चामल सोना नया	</td>	<td>	Kilogram	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	497	</td>	<td>	Rich Butter	</td>	<td>	रिच बटर	</td>	<td>	Packet	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	498	</td>	<td>	Rich Butter 10	</td>	<td>	रिच बटर 10	</td>	<td>	Pieces	</td>	<td>	10.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	499	</td>	<td>	Rich Laundry Soap 200 Gm	</td>	<td>	रिच लाँड्री साबुन 200 ग्राम	</td>	<td>	Pieces	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	500	</td>	<td>	Rich Laundry Soap 250 Gm	</td>	<td>	रिच लाँड्री साबुन 250 ग्राम	</td>	<td>	Pieces	</td>	<td>	60.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	501	</td>	<td>	Rich Soap100 Gm	</td>	<td>	रिच साबुन 100 ग्राम	</td>	<td>	Pieces	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	502	</td>	<td>	Rich Surf 700 Gm	</td>	<td>	रिच सर्फ 700 ग्राम	</td>	<td>	Packet	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	503	</td>	<td>	Roll Plastic	</td>	<td>	रोल प्लास्टिक	</td>	<td>	Kilogram	</td>	<td>	300.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	504	</td>	<td>	Royal Bowl Rice	</td>	<td>	रोयल बाउल चावल	</td>	<td>	Kilogram	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	505	</td>	<td>	Rubber	</td>	<td>	रबर	</td>	<td>	Kilogram	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	506	</td>	<td>	Rulling Paper	</td>	<td>	रुलिंग पेपर	</td>	<td>	Rim	</td>	<td>	7.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	507	</td>	<td>	Sabudana 200Gm	</td>	<td>	साबुदाना 200 ग्राम	</td>	<td>	Packet	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	508	</td>	<td>	Sabudana 500Gm	</td>	<td>	साबुदाना ५०० ग्राम	</td>	<td>	Packet	</td>	<td>	115.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	509	</td>	<td>	SA-Ginger	</td>	<td>	SA- अदुवा	</td>	<td>	Packet	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	510	</td>	<td>	Sahara	</td>	<td>	सहारा	</td>	<td>	Batta	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	511	</td>	<td>	Sahara Gas	</td>	<td>	सहारा ग्यास	</td>	<td>	Cylinder	</td>	<td>	1845.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	512	</td>	<td>	Sakhar	</td>	<td>	सखर	</td>	<td>	Kilogram	</td>	<td>	115.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	513	</td>	<td>	Samriddhi Tea 100 Gm	</td>	<td>	समृद्धि चिया 100 ग्राम	</td>	<td>	Packet	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	514	</td>	<td>	Samriddhi Tea 200 Gm	</td>	<td>	समृद्धि चिया 200 ग्राम	</td>	<td>	Packet	</td>	<td>	100.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	515	</td>	<td>	Samriddhi Tea 500 Gm	</td>	<td>	समृद्धि चिया ५०० ग्राम	</td>	<td>	Packet	</td>	<td>	230.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	516	</td>	<td>	Sancho	</td>	<td>	सान्चो	</td>	<td>	Pieces	</td>	<td>	45.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	517	</td>	<td>	Sanglamaar	</td>	<td>	सांगलामार	</td>	<td>	Pieces	</td>	<td>	25.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	518	</td>	<td>	Sano Kerau	</td>	<td>	सानो केराउ	</td>	<td>	Kilogram	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	519	</td>	<td>	Sarita Rice	</td>	<td>	सरिता राइस	</td>	<td>	Kilogram	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	520	</td>	<td>	Satu	</td>	<td>	सातु	</td>	<td>	Packet	</td>	<td>	120.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	521	</td>	<td>	Sensodyne Pest 150 Gm	</td>	<td>	सेन्सोडाइन कीट 150 ग्राम	</td>	<td>	Pieces	</td>	<td>	325.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	522	</td>	<td>	Sensodyne Pest 150 Gm FG	</td>	<td>	Sensodyne Pest 150 Gm FG	</td>	<td>	Pieces	</td>	<td>	325.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	523	</td>	<td>	Seto Chana	</td>	<td>	सेतो चना	</td>	<td>	Kilogram	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	524	</td>	<td>	Seto Til 100gm	</td>	<td>	सेतो तिल 100 ग्राम	</td>	<td>	Packet	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	525	</td>	<td>	Seto Til 200gm	</td>	<td>	सेतो तिल 200 ग्राम	</td>	<td>	Packet	</td>	<td>	100.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	526	</td>	<td>	Seto Til Khulla	</td>	<td>	सेतो तिल खुल्ला	</td>	<td>	Kilogram	</td>	<td>	500.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	527	</td>	<td>	Seviyan 150Gm	</td>	<td>	सेभियन 150 ग्राम	</td>	<td>	Packet	</td>	<td>	65.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	528	</td>	<td>	Shalimar Dhup	</td>	<td>	शालिमार धुप	</td>	<td>	Packet	</td>	<td>	100.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	529	</td>	<td>	Shanti 1Kg	</td>	<td>	शान्ति १ किलो	</td>	<td>	Packet	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	530	</td>	<td>	Shikhar Ice Rush 20 be	</td>	<td>	शिखर आइस रश २० हो	</td>	<td>	Batta	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	531	</td>	<td>	Shubha Deepawali Sticker	</td>	<td>	शुभ दीपावली स्टिकर	</td>	<td>	Pieces	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	532	</td>	<td>	Sinka	</td>	<td>	सिन्का	</td>	<td>	Packet	</td>	<td>	25.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	533	</td>	<td>	Sinke Dhoop 100	</td>	<td>	सिंक धूप 100	</td>	<td>	Mutha	</td>	<td>	100.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	534	</td>	<td>	Sinke Dhoop 15	</td>	<td>	सिंक धुप १५	</td>	<td>	Mutha	</td>	<td>	15.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	535	</td>	<td>	Sinke Dhoop 35	</td>	<td>	सिंक धूप ३५	</td>	<td>	Mutha	</td>	<td>	30.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	536	</td>	<td>	Sinke Dhoop 50	</td>	<td>	सिंक धुप ५०	</td>	<td>	Mutha	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	537	</td>	<td>	SK-Garlic	</td>	<td>	SK - लसुन	</td>	<td>	Packet	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	538	</td>	<td>	Snow Mystique	</td>	<td>	हिउँ मिस्टिक	</td>	<td>	Packet	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	539	</td>	<td>	Soaltee Rice	</td>	<td>	सोल्टी चामल	</td>	<td>	Kilogram	</td>	<td>	89.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	540	</td>	<td>	Soanpapdi	</td>	<td>	सोनपापडी	</td>	<td>	Packet	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	541	</td>	<td>	Soda 30Gm	</td>	<td>	सोडा 30 ग्राम	</td>	<td>	Packet	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	542	</td>	<td>	Soup 100Gm	</td>	<td>	सूप 100 ग्राम	</td>	<td>	Packet	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	543	</td>	<td>	Soup 500Gm	</td>	<td>	सूप 500 ग्राम	</td>	<td>	Packet	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	544	</td>	<td>	Soyabin Oil 500 Ml Pouch	</td>	<td>	सोयाबिन तेल 500 एमएल पाउच	</td>	<td>	Pouch	</td>	<td>	105.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	545	</td>	<td>	Soya Chokar	</td>	<td>	सोया चोकर	</td>	<td>	Bora	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	546	</td>	<td>	Sprite 1 Li	</td>	<td>	स्प्राइट १ ली	</td>	<td>	Bottle	</td>	<td>	135.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	547	</td>	<td>	Sprite 2.25 Li	</td>	<td>	स्प्राइट २.२५ ली	</td>	<td>	Bottle	</td>	<td>	255.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	548	</td>	<td>	Sprite 2 Li	</td>	<td>	स्प्राइट २ लि	</td>	<td>	Bottle	</td>	<td>	215.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	549	</td>	<td>	SSP(ZINC)	</td>	<td>	SSP (ZINC)	</td>	<td>	Kilogram	</td>	<td>	40.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	550	</td>	<td>	Sting Energy Drink 250Ml	</td>	<td>	स्टिङ एनर्जी ड्रिंक २५० एमएल	</td>	<td>	Bottle	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	551	</td>	<td>	Subhamuharat Rice	</td>	<td>	शुभमुहर्त चामल	</td>	<td>	Kilogram	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	552	</td>	<td>	Sugar Free Biscuit	</td>	<td>	चिनी फ्री बिस्कुट	</td>	<td>	Packet	</td>	<td>	100.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	553	</td>	<td>	Sugar free  Coconut Biscuit	</td>	<td>	चिनी मुक्त नरिवल बिस्कुट	</td>	<td>	Packet	</td>	<td>	160.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	554	</td>	<td>	Suji Sahanai 500g Pouch	</td>	<td>	सुजी सहानाइ 500 ग्राम पाउच	</td>	<td>	Packet	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	555	</td>	<td>	Sukeko Bodi	</td>	<td>	सुकेको बोडी	</td>	<td>	Kilogram	</td>	<td>	170.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	556	</td>	<td>	Sukeko Khursani	</td>	<td>	सुकेको खुर्सानी	</td>	<td>	Kilogram	</td>	<td>	550.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	557	</td>	<td>	Sukumel 50 Gm	</td>	<td>	सुकुमेल ५० ग्राम	</td>	<td>	Packet	</td>	<td>	165.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	558	</td>	<td>	Sukumel Khulla	</td>	<td>	सुकुमेल खुल्ला	</td>	<td>	Kilogram	</td>	<td>	3600.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	559	</td>	<td>	Sukumel Sano Pkt	</td>	<td>	सुकुमेल सानो प्र	</td>	<td>	Packet	</td>	<td>	10.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	560	</td>	<td>	Sunflower Oil 500Ml Pouch	</td>	<td>	सूर्यमुखी तेल 500ml पाउच	</td>	<td>	Pouch	</td>	<td>	105.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	561	</td>	<td>	Sunsilk 640ML	</td>	<td>	सनसिल्क 640ML	</td>	<td>	Pieces	</td>	<td>	580.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	562	</td>	<td>	Sunsilk P 335 Ml	</td>	<td>	सनसिल्क पी 335 एमएल	</td>	<td>	Pieces	</td>	<td>	325.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	563	</td>	<td>	Sunsilk Serendipit	</td>	<td>	सनसिल्क सेरेन्डिपिट	</td>	<td>	Pieces	</td>	<td>	325.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	564	</td>	<td>	Sunsilk Shamp Black 6 Ml	</td>	<td>	सनसिल्क स्याम्प कालो 6 मिली	</td>	<td>	Pieces	</td>	<td>	2.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	565	</td>	<td>	Sunsilk Shampoo Black 335Ml	</td>	<td>	सनसिल्क शैम्पू कालो 335 एमएल	</td>	<td>	Pieces	</td>	<td>	325.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	566	</td>	<td>	Supari	</td>	<td>	सुपारी	</td>	<td>	Gram	</td>	<td>	5.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	567	</td>	<td>	Supari Sano Pkt	</td>	<td>	Supari Sano Pkt	</td>	<td>	Packet	</td>	<td>	10.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	568	</td>	<td>	Super Dishwash 150Gm	</td>	<td>	सुपर डिशवाश 150Gm	</td>	<td>	Packet	</td>	<td>	20.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	569	</td>	<td>	Super Dishwash 250Gm	</td>	<td>	सुपर डिशवाश 250Gm	</td>	<td>	Pieces	</td>	<td>	30.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	570	</td>	<td>	Super Dishwash 75Gm	</td>	<td>	सुपर डिशवाश 75 ग्राम	</td>	<td>	Pieces	</td>	<td>	10.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	571	</td>	<td>	Super Dishwash Tube	</td>	<td>	सुपर डिशवाश ट्यूब	</td>	<td>	Pieces	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	572	</td>	<td>	Superflex Brush ic20	</td>	<td>	सुपरफ्लेक्स ब्रश ic20	</td>	<td>	Pieces	</td>	<td>	30.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	573	</td>	<td>	Surya Luxury Kings 20 Be	</td>	<td>	सूर्य लक्जरी किंग्स 20 हो	</td>	<td>	Batta	</td>	<td>	315.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	574	</td>	<td>	Sus Soya	</td>	<td>	सुस सोया	</td>	<td>	Bottle	</td>	<td>	45.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	575	</td>	<td>	Sus Tomato	</td>	<td>	सस टमाटर	</td>	<td>	Bottle	</td>	<td>	80.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	576	</td>	<td>	Tea Sarbottam 100Gm	</td>	<td>	चिया सर्वोत्तम 100 ग्राम	</td>	<td>	Pieces	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	577	</td>	<td>	Tejpatta	</td>	<td>	तेजपत्ता	</td>	<td>	Gram	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	578	</td>	<td>	Tenz Noodle	</td>	<td>	Tenz नूडल	</td>	<td>	Packet	</td>	<td>	10.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	579	</td>	<td>	Testi Biscuit	</td>	<td>	टेस्टी बिस्कुट	</td>	<td>	Packet	</td>	<td>	10.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	580	</td>	<td>	Thin Arrowroot	</td>	<td>	पातलो एरोरूट	</td>	<td>	Packet	</td>	<td>	10.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	581	</td>	<td>	Tiger Biscuit	</td>	<td>	टाइगर बिस्कुट	</td>	<td>	Pieces	</td>	<td>	10.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	582	</td>	<td>	Tika Soap 150Gm	</td>	<td>	टिका साबुन 150 ग्राम	</td>	<td>	Pieces	</td>	<td>	35.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	583	</td>	<td>	Tika Soap 200Gm	</td>	<td>	टिका साबुन 200 ग्राम	</td>	<td>	Pieces	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	584	</td>	<td>	Tika Soap 250Gm	</td>	<td>	टिका साबुन 250 ग्राम	</td>	<td>	Pieces	</td>	<td>	60.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	585	</td>	<td>	Toilet Brush	</td>	<td>	शौचालय ब्रश	</td>	<td>	Pieces	</td>	<td>	90.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	586	</td>	<td>	Tomato	</td>	<td>	टमाटर	</td>	<td>	Kilogram	</td>	<td>	85.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	587	</td>	<td>	Tomato Puree 850Gm	</td>	<td>	टमाटर प्यूरी 850 ग्राम	</td>	<td>	Batta	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	588	</td>	<td>	Top Biscuit	</td>	<td>	शीर्ष बिस्कुट	</td>	<td>	Packet	</td>	<td>	60.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	589	</td>	<td>	Top Biscuit 10	</td>	<td>	शीर्ष बिस्कुट 10	</td>	<td>	Packet	</td>	<td>	10.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	590	</td>	<td>	Top Biscuit 25	</td>	<td>	शीर्ष बिस्कुट 25	</td>	<td>	Packet	</td>	<td>	25.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	591	</td>	<td>	Tori Oil 500 Ml Pouch	</td>	<td>	टोरी तेल 500 एमएल पाउच	</td>	<td>	Pouch	</td>	<td>	130.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	592	</td>	<td>	Tori Oil 5Li	</td>	<td>	टोरी तेल 5 लि	</td>	<td>	Liter	</td>	<td>	1850.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	593	</td>	<td>	Tori Oil Sarbottam 1 Li	</td>	<td>	तोरी तेल सर्वोत्तम १ लि	</td>	<td>	Bottle	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	594	</td>	<td>	Tost Rusk 50	</td>	<td>	Tost Rusk 50	</td>	<td>	Packet	</td>	<td>	80.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	595	</td>	<td>	Trekkers Choice Biscuit	</td>	<td>	ट्रेकर्स च्वाइस बिस्कुट	</td>	<td>	Packet	</td>	<td>	25.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	596	</td>	<td>	Trishul Sabun	</td>	<td>	त्रिशूल सबुन	</td>	<td>	Pieces	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	597	</td>	<td>	Trishul Sabun 40	</td>	<td>	त्रिशूल सबुन 40	</td>	<td>	Pieces	</td>	<td>	40.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	598	</td>	<td>	Unibic Biscuit	</td>	<td>	युनिबिक बिस्कुट	</td>	<td>	Packet	</td>	<td>	10.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	599	</td>	<td>	Upaj 1Kg	</td>	<td>	उपज १ केजी	</td>	<td>	Packet	</td>	<td>	545.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	600	</td>	<td>	Urea Mal	</td>	<td>	युरिया मल	</td>	<td>	Kilogram	</td>	<td>	20.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	601	</td>	<td>	Urja Rice	</td>	<td>	उर्जा राइस	</td>	<td>	Kilogram	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	602	</td>	<td>	US 312 1Kg	</td>	<td>	US 312 1Kg	</td>	<td>	Packet	</td>	<td>	545.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	603	</td>	<td>	US Bhindi 500gm	</td>	<td>	US भिन्डी 500 ग्राम	</td>	<td>	Packet	</td>	<td>	1825.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	604	</td>	<td>	Usina Rice 20Kg	</td>	<td>	उसिना चामल २० किलो	</td>	<td>	Bora	</td>	<td>	0.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	605	</td>	<td>	Vai Tika	</td>	<td>	वै टिका	</td>	<td>	Packet	</td>	<td>	25.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	606	</td>	<td>	Vaseline BM	</td>	<td>	भ्यासेलिन बीएम	</td>	<td>	Pieces	</td>	<td>	115.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	607	</td>	<td>	Vaseline Bright	</td>	<td>	भ्यासलीन उज्यालो	</td>	<td>	Pieces	</td>	<td>	110.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	608	</td>	<td>	Vermi Compost	</td>	<td>	वर्मी कम्पोस्ट	</td>	<td>	Kilogram	</td>	<td>	35.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	609	</td>	<td>	Vigos Chocolate	</td>	<td>	Vigos चकलेट	</td>	<td>	Pieces	</td>	<td>	15.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	610	</td>	<td>	Vim Bar Soap 75Gm	</td>	<td>	विम बार साबुन 75 ग्राम	</td>	<td>	Pieces	</td>	<td>	10.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	611	</td>	<td>	Vita MIlk Biscuit	</td>	<td>	भिटा मिल्क बिस्कुट	</td>	<td>	Packet	</td>	<td>	10.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	612	</td>	<td>	Wai Wai Noodle	</td>	<td>	वाइ वाइ नूडल	</td>	<td>	Packet	</td>	<td>	20.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	613	</td>	<td>	Wheel Active 200GM	</td>	<td>	व्हील सक्रिय 200GM	</td>	<td>	Pieces	</td>	<td>	20.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	614	</td>	<td>	Wheel Active Blue 1KG	</td>	<td>	व्हील सक्रिय निलो 1KG	</td>	<td>	Packet	</td>	<td>	125.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	615	</td>	<td>	Wheel Active Blue 500G	</td>	<td>	व्हील सक्रिय निलो 500G	</td>	<td>	Packet	</td>	<td>	70.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	616	</td>	<td>	Wheel Ok 200GM	</td>	<td>	व्हील ठीक 200GM	</td>	<td>	Pieces	</td>	<td>	50.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	617	</td>	<td>	White Top Cauliflower	</td>	<td>	सेतो शीर्ष फूलगोभी	</td>	<td>	Packet	</td>	<td>	550.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	618	</td>	<td>	Wilano Chocolate	</td>	<td>	विलानो चकलेट	</td>	<td>	Pieces	</td>	<td>	15.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	619	</td>	<td>	Xpert Sabun 150Gm	</td>	<td>	Xpert Sabun 150Gm	</td>	<td>	Pieces	</td>	<td>	20.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	620	</td>	<td>	Xpert Sabun 75Gm	</td>	<td>	Xpert Sabun 75Gm	</td>	<td>	Pieces	</td>	<td>	10.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	621	</td>	<td>	Xtraa Active Detergent 5 Kg	</td>	<td>	Xtraa सक्रिय डिटर्जेंट 5 किलो	</td>	<td>	Packet	</td>	<td>	700.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	622	</td>	<td>	Yamini Tmrs 1626 1 Kg	</td>	<td>	यामिनी Tmrs 1626 1 Kg	</td>	<td>	Packet	</td>	<td>	245.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	623	</td>	<td>	Yashoda Soap	</td>	<td>	यशोदा साबुन	</td>	<td>	Pieces	</td>	<td>	60.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	624	</td>	<td>	ZEN Dori	</td>	<td>	जेन डोरी	</td>	<td>	Kilogram	</td>	<td>	225.000		<td>	-	</td>	       </tr>
+ <tr>	<td>	625	</td>	<td>	Zing WaiWai	</td>	<td>	Zing WaiWai	</td>	<td>	Packet	</td>	<td>	22.000		<td>	-	</td>	       </tr>
+
+
+
+               
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>

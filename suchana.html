@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6 Column, 50 Row Table</title>
+    <style>
+        body {
+            color: red;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: yellow;
+        }
+        .marquee-container {
+            height: 550px; /* Set a fixed height for the container */
+            overflow: hidden; /* Hide the overflow content */
+            position: relative; /* Set position relative for the container */
+        }
+        .marquee-content {
+            animation: marquee-up 60s linear infinite; /* Use keyframe animation for upward scrolling */
+            position: absolute; /* Position absolute for scrolling content */
+            bottom: -10%; /* Start the marquee from the bottom */
+            width: 100%;
+        }
+        @keyframes marquee-up {
+            0% {
+                transform: translateY(100%); /* Start from below the container */
+            }
+            100% {
+                transform: translateY(-100%); /* Scroll up to above the container */
+            }
+        }
+        .fixed-header {
+            position: sticky; /* Position sticky for the fixed header */
+            top: 0;
+            background-color: white; /* Background color to match the page */
+            z-index: 1;
+        }
+        /* Adjusting column widths */
+        th:nth-child(1),
+        td:nth-child(1) {
+            width: 5%; /* Set the width of the first column */
+        }
+        th:nth-child(2),
+        td:nth-child(2) {
+            width: 15%; /* Set the width of the second column */
+        }
+        th:nth-child(3),
+        td:nth-child(3) {
+            width: 45%; /* Set the width of the third column */
+        }
+        th:nth-child(4),
+        td:nth-child(4) {
+            width: 11%; /* Set the width of the fourth column */
+        }
+        th:nth-child(5),
+        td:nth-child(5) {
+            width: 12%; /* Set the width of the fifth column */
+        }
+        th:nth-child(6),
+        td:nth-child(6) {
+            width: 12%; /* Set the width of the sixth column */
+        }
+
+        @keyframes blink {
+            0% { color: green; }
+            50% { color: red; }
+            100% { color: green; }
+        }
+        .blinking-marquee {
+            animation: blink 1s infinite;
+            font-size: 55px; /* Increase font size if needed */
+            text-align: justify; /* Center the text */
+        }
+    </style>
+</head>
+<body>
+
+<h1 style="color: red; background-color: white; text-align: center; font-size: 24px;">
+    <img src="https://i.ibb.co/K0qpc3R/Coop-Logo-New1.jpg" alt="Coop-Logo-New1" border="0" style="float: left; margin-right: 10px;">
+    श्री नमुना कृषक बहुमुखी सहकारी संस्था लि.,मनहरी गाउँपालिका -३,गैरिचोक,मकवानपुर<br>स्थापना २०५५/१२/२२ <br> सुचना ! 
+  सुचना !! सुचना !!!
+</h1>
+<marquee style="color: blue;">
+    बोनस वितरण सम्बन्धि सूचना 
+</marquee>
+<nav>
+    <!-- Navigation links can be added here -->
+</nav>
+<main>
+    <section>
+        <h3 style="text-align:justify;">
+            <div class="blinking-marquee">
+               सदस्यहरुले सहकारीको पसलमा सामान खरिद गरेको आधारमा वितरण गर्ने भनिएको बोनश रकम यहि २०८१ असार १ गते बिहान वितरण गरिने सम्बन्धित सबैमा जानकारीको लागि अनुरोध  गर्दछु |
+            </div>
+        </h3>
+    </section>
+    <section>
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0"></script>
+        <div class="fb-like" data-href="https://namunacoop.github.io/namunafmc/suchana.html" data-width="" data-layout="standard" data-action="like" data-size="small" data-share="true"></div>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2024 Shree Namuaa Farmer Multiple Co-operative Ltd. All rights reserved.</p>
+</footer>
+<script src="scripts.js"></script>
+</body>
+</html>
