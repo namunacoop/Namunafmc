@@ -21,54 +21,54 @@
             background-color: yellow;
         }
         .marquee-container {
-            height: 550px;
-            overflow: hidden;
-            position: relative;
+            height: 550px; /* Set a fixed height for the container */
+            overflow: hidden; /* Hide the overflow content */
+            position: relative; /* Set position relative for the container */
         }
         .marquee-content {
-            animation: marquee-up 60s linear infinite;
-            position: absolute;
-            bottom: -10%;
+            animation: marquee-up 60s linear infinite; /* Use keyframe animation for upward scrolling */
+            position: absolute; /* Position absolute for scrolling content */
+            bottom: -10%; /* Start the marquee from the bottom */
             width: 100%;
         }
         @keyframes marquee-up {
             0% {
-                transform: translateY(100%);
+                transform: translateY(100%); /* Start from below the container */
             }
             100% {
-                transform: translateY(-100%);
+                transform: translateY(-100%); /* Scroll up to above the container */
             }
         }
         .fixed-header {
-            position: sticky;
+            position: sticky; /* Position sticky for the fixed header */
             top: 0;
-            background-color: white;
+            background-color: white; /* Background color to match the page */
             z-index: 1;
         }
         /* Adjusting column widths */
         th:nth-child(1),
         td:nth-child(1) {
-            width: 5%;
+            width: 5%; /* Set the width of the first column */
         }
         th:nth-child(2),
         td:nth-child(2) {
-            width: 15%;
+            width: 15%; /* Set the width of the second column */
         }
         th:nth-child(3),
         td:nth-child(3) {
-            width: 45%;
+            width: 45%; /* Set the width of the third column */
         }
         th:nth-child(4),
         td:nth-child(4) {
-            width: 11%;
+            width: 11%; /* Set the width of the fourth column */
         }
         th:nth-child(5),
         td:nth-child(5) {
-            width: 12%;
+            width: 12%; /* Set the width of the fifth column */
         }
         th:nth-child(6),
         td:nth-child(6) {
-            width: 12%;
+            width: 12%; /* Set the width of the sixth column */
         }
 
         @keyframes blink {
@@ -78,8 +78,8 @@
         }
         .blinking-marquee {
             animation: blink 1s infinite;
-            font-size: 20px;
-            text-align: justify;
+            font-size: 20px; /* Increase font size if needed */
+            text-align: justify; /* Center the text */
         }
     </style>
 </head>
@@ -88,23 +88,36 @@
 <h1 style="color: red; background-color: white; text-align: center; font-size: 24px;">
     <img src="https://i.ibb.co/K0qpc3R/Coop-Logo-New1.jpg" alt="Coop-Logo-New1" border="0" style="float: left; margin-right: 10px;">
     श्री नमुना कृषक बहुमुखी सहकारी संस्था लि.,मनहरी गाउँपालिका -३,गैरिचोक,मकवानपुर<br>स्थापना २०५५/१२/२२ <br> सुचना ! 
-  सुचना !! सुचना !!!
+    सुचना !! सुचना !!!
 </h1>
+
 <marquee style="color: blue;">
     २७औं वार्षिक साधारण सभा सम्बन्धि अत्यन्त जरुरि सूचना 
 </marquee>
+
 <nav>
     <!-- Navigation links can be added here -->
 </nav>
+
 <main>
     <section>
         <h3 style="text-align:justify;">
             <div class="blinking-marquee">
-             प्रस्तुत सम्वन्धमा यस संस्थाको मिति २०८१।०८।२९ गते बसेको संचालक समितिको बैठक निर्णयानुसार संस्थाको २७औं वार्षिक साधारण सभा तपशिल अनुसारको मिति,स्थान र समयमा संचालन गरिने भएको हुँदा  उक्त सभामा गरिमामय उपस्थितिका लागि यस संस्थाका सम्पुर्ण शेयर सदस्यहरुलाई अनुरोध गरीन्छ ।<br>
-             ... (rest of the content) ...
+             प्रस्तुत सम्वन्धमा यस संस्थाको मिति २०८१।०८।२९ गते बसेको संचालक समितिको बैठक निर्णयानुसार संस्थाको २७औं वार्षिक साधारण सभा तपशिल अनुसारको मिति,स्थान र समयमा संचालन गरिने भएको हुँदा  उक्त सभामा गरिमामय उपस्थितिका लागि यस संस्थाका सम्पुर्ण शेयर सदस्यहरुलाई अनुरोध गरीन्छ । 
             </div>
         </h3>
     </section>
+
+    <!-- Audio Player Section with Autoplay -->
+    <section>
+        <h4>Listen to Important Announcement</h4>
+        <!-- Audio player with autoplay enabled -->
+        <audio id="audioPlayer" controls autoplay>
+            <source src="https://github.com/namunacoop/Namunafmc/blob/main/%E0%A5%A8%E0%A5%AD%E0%A4%94%E0%A4%82%20%E0%A4%AC%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%B7%E0%A4%BF%E0%A4%95%20%E0%A4%B8%E0%A4%BE%E0%A4%A7%E0%A4%BE%E0%A4%B0%E0%A4%A3%20%E0%A4%B8%E0%A4%AD%E0%A4%BE%20%E0%A4%A8%E0%A4%AE%E0%A5%81%E0%A4%A8%E0%A4%BE%20%E0%A4%95%E0%A5%83%E0%A4%B7%E0%A4%95%20%E0%A4%AC%E0%A4%B9%E0%A5%81%E0%A4%AE%E0%A5%81%E0%A4%96%E0%A5%80%20%20%E0%A4%B8%E0%A4%B9%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A5%80%20.mp3?raw=true" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </section>
+
     <section>
         <div id="fb-root"></div>
         <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0"></script>
@@ -112,19 +125,17 @@
     </section>
 </main>
 
-<!-- Add Audio Section -->
-<section>
-    <h3>Listen to Announcement</h3>
-    <!-- Audio with Google Drive link -->
-    <audio controls autoplay>
-        <source src="https://github.com/namunacoop/Namunafmc/blob/main/%E0%A5%A8%E0%A5%AD%E0%A4%94%E0%A4%82%20%E0%A4%AC%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%B7%E0%A4%BF%E0%A4%95%20%E0%A4%B8%E0%A4%BE%E0%A4%A7%E0%A4%BE%E0%A4%B0%E0%A4%A3%20%E0%A4%B8%E0%A4%AD%E0%A4%BE%20%E0%A4%A8%E0%A4%AE%E0%A5%81%E0%A4%A8%E0%A4%BE%20%E0%A4%95%E0%A5%83%E0%A4%B7%E0%A4%95%20%E0%A4%AC%E0%A4%B9%E0%A5%81%E0%A4%AE%E0%A5%81%E0%A4%96%E0%A5%80%20%20%E0%A4%B8%E0%A4%B9%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A5%80%20.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
-    </audio>
-</section>
-
 <footer>
     <p>&copy; 2024 Shree Namuaa Farmer Multiple Co-operative Ltd. All rights reserved.</p>
 </footer>
-<script src="scripts.js"></script>
+
+<script>
+    // JavaScript to autoplay the audio on load if it doesn't work with 'autoplay' attribute
+    window.onload = function() {
+        var audio = document.getElementById('audioPlayer');
+        audio.play();
+    };
+</script>
+
 </body>
 </html>
