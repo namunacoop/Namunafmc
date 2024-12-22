@@ -21,54 +21,54 @@
             background-color: yellow;
         }
         .marquee-container {
-            height: 550px; /* Set a fixed height for the container */
-            overflow: hidden; /* Hide the overflow content */
-            position: relative; /* Set position relative for the container */
+            height: 550px;
+            overflow: hidden;
+            position: relative;
         }
         .marquee-content {
-            animation: marquee-up 60s linear infinite; /* Use keyframe animation for upward scrolling */
-            position: absolute; /* Position absolute for scrolling content */
-            bottom: -10%; /* Start the marquee from the bottom */
+            animation: marquee-up 60s linear infinite;
+            position: absolute;
+            bottom: -10%;
             width: 100%;
         }
         @keyframes marquee-up {
             0% {
-                transform: translateY(100%); /* Start from below the container */
+                transform: translateY(100%);
             }
             100% {
-                transform: translateY(-100%); /* Scroll up to above the container */
+                transform: translateY(-100%);
             }
         }
         .fixed-header {
-            position: sticky; /* Position sticky for the fixed header */
+            position: sticky;
             top: 0;
-            background-color: white; /* Background color to match the page */
+            background-color: white;
             z-index: 1;
         }
         /* Adjusting column widths */
         th:nth-child(1),
         td:nth-child(1) {
-            width: 5%; /* Set the width of the first column */
+            width: 5%;
         }
         th:nth-child(2),
         td:nth-child(2) {
-            width: 15%; /* Set the width of the second column */
+            width: 15%;
         }
         th:nth-child(3),
         td:nth-child(3) {
-            width: 45%; /* Set the width of the third column */
+            width: 45%;
         }
         th:nth-child(4),
         td:nth-child(4) {
-            width: 11%; /* Set the width of the fourth column */
+            width: 11%;
         }
         th:nth-child(5),
         td:nth-child(5) {
-            width: 12%; /* Set the width of the fifth column */
+            width: 12%;
         }
         th:nth-child(6),
         td:nth-child(6) {
-            width: 12%; /* Set the width of the sixth column */
+            width: 12%;
         }
 
         @keyframes blink {
@@ -78,8 +78,8 @@
         }
         .blinking-marquee {
             animation: blink 1s infinite;
-            font-size: 20px; /* Increase font size if needed */
-            text-align: justify; /* Center the text */
+            font-size: 20px;
+            text-align: justify;
         }
     </style>
 </head>
@@ -115,9 +115,9 @@
 <!-- Add Audio Section -->
 <section>
     <h3>Listen to Announcement</h3>
-    <!-- Added autoplay attribute -->
+    <!-- Audio with Google Drive link -->
     <audio controls autoplay>
-        <source src="https://drive.google.com/file/d/16dHXjygLQ13pGmZSHvw-lL_En90L5NGV/view?usp=sharing" type="audio/mp3">
+        <source src="https://drive.google.com/uc?export=download&id=16dHXjygLQ13pGmZSHvw-lL_En90L5NGV" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
 </section>
