@@ -1,141 +1,226 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ne">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>6 Column, 50 Row Table</title>
+    <title>दूध अनुदान वितरण कार्यक्रम - मनहरी गाउँपालिका</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body {
-            color: red;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid #000;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: yellow;
-        }
-        .marquee-container {
-            height: 550px; /* Set a fixed height for the container */
-            overflow: hidden; /* Hide the overflow content */
-            position: relative; /* Set position relative for the container */
-        }
-        .marquee-content {
-            animation: marquee-up 60s linear infinite; /* Use keyframe animation for upward scrolling */
-            position: absolute; /* Position absolute for scrolling content */
-            bottom: -10%; /* Start the marquee from the bottom */
-            width: 100%;
-        }
-        @keyframes marquee-up {
-            0% {
-                transform: translateY(100%); /* Start from below the container */
-            }
-            100% {
-                transform: translateY(-100%); /* Scroll up to above the container */
-            }
-        }
-        .fixed-header {
-            position: sticky; /* Position sticky for the fixed header */
-            top: 0;
-            background-color: white; /* Background color to match the page */
-            z-index: 1;
-        }
-        /* Adjusting column widths */
-        th:nth-child(1),
-        td:nth-child(1) {
-            width: 5%; /* Set the width of the first column */
-        }
-        th:nth-child(2),
-        td:nth-child(2) {
-            width: 15%; /* Set the width of the second column */
-        }
-        th:nth-child(3),
-        td:nth-child(3) {
-            width: 45%; /* Set the width of the third column */
-        }
-        th:nth-child(4),
-        td:nth-child(4) {
-            width: 11%; /* Set the width of the fourth column */
-        }
-        th:nth-child(5),
-        td:nth-child(5) {
-            width: 12%; /* Set the width of the fifth column */
-        }
-        th:nth-child(6),
-        td:nth-child(6) {
-            width: 12%; /* Set the width of the sixth column */
+        * {
+            font-family: 'Mukta', sans-serif;
         }
 
-        @keyframes blink {
-            0% { color: green; }
-            50% { color: red; }
-            100% { color: green; }
+        body {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #1c3b57 100%);
+            overflow-x: hidden;
+            min-height: 100vh;
         }
-        .blinking-marquee {
-            animation: blink 1s infinite;
-            font-size: 95px; /* Increase font size if needed */
-            text-align: justify; /* Center the text */
+
+        /* 3D Glassmorphism Cards */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3), 
+                        inset 0 0 15px rgba(255, 255, 255, 0.5);
+            border-radius: 24px;
+        }
+
+        /* Moving Cows Animation in Background */
+        .cow-animation-container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 180px;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .walking-cow-1 {
+            position: absolute;
+            bottom: 10px;
+            font-size: 80px;
+            animation: walkRight 22s linear infinite;
+            filter: drop-shadow(0 10px 8px rgba(0,0,0,0.4));
+        }
+
+        .walking-cow-2 {
+            position: absolute;
+            bottom: 25px;
+            font-size: 60px;
+            animation: walkRight 32s linear infinite;
+            animation-delay: -10s;
+            opacity: 0.85;
+            filter: drop-shadow(0 8px 6px rgba(0,0,0,0.3));
+        }
+
+        .walking-cow-3 {
+            position: absolute;
+            bottom: 5px;
+            font-size: 95px;
+            animation: walkRight 18s linear infinite;
+            animation-delay: -5s;
+            filter: drop-shadow(0 12px 10px rgba(0,0,0,0.5));
+        }
+
+        @keyframes walkRight {
+            0% { left: -150px; transform: scaleX(1); }
+            100% { left: 105vw; transform: scaleX(1); }
+        }
+
+        /* Floating Milk Cans Animation */
+        .milk-can-floating {
+            animation: floatCan 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes floatCan {
+            0% { transform: translateY(0px) rotate(-3deg); }
+            100% { transform: translateY(-18px) rotate(3deg); }
+        }
+
+        /* Glowing text effects */
+        .glow-title {
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 215, 0, 0.6);
+        }
+
+        .glow-badge {
+            box-shadow: 0 0 25px rgba(234, 179, 8, 0.8);
+            animation: pulseGlow 2s infinite alternate;
+        }
+
+        @keyframes pulseGlow {
+            0% { transform: scale(1); box-shadow: 0 0 20px rgba(234, 179, 8, 0.6); }
+            100% { transform: scale(1.05); box-shadow: 0 0 35px rgba(234, 179, 8, 1); }
+        }
+
+        /* Custom Splash Wave */
+        .wave-bg {
+            background: linear-gradient(0deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 100%);
         }
     </style>
 </head>
-<body>
+<body class="text-gray-900 pb-24 relative">
 
-<h1 style="color: red; background-color: white; text-align: center; font-size: 24px;">
-    <img src="https://i.ibb.co/K0qpc3R/Coop-Logo-New1.jpg" alt="Coop-Logo-New1" border="0" style="float: left; margin-right: 10px;">
-    श्री नमुना कृषक बहुमुखी सहकारी संस्था लि.,मनहरी गाउँपालिका -३,गैरिचोक,मकवानपुर<br>स्थापना २०५५/१२/२२ <br> स्वागतम ! 
-    स्वागतम  !! स्वागतम !!!
-</h1>
+    <!-- Background Floating Milk Cans Elements -->
+    <div class="fixed top-12 left-6 text-white/20 text-8xl milk-can-floating pointer-events-none z-0">
+        <i class="fa-solid fa-bottle-droplet"></i>
+    </div>
+    <div class="fixed top-1/3 right-8 text-white/15 text-9xl milk-can-floating pointer-events-none z-0" style="animation-delay: -2s;">
+        <i class="fa-solid fa-cow"></i>
+    </div>
+    <div class="fixed bottom-1/4 left-10 text-white/20 text-8xl milk-can-floating pointer-events-none z-0" style="animation-delay: -1s;">
+        <i class="fa-solid fa-whisky-glass"></i>
+    </div>
 
-<marquee style="color: blue;">
-    २७औं वार्षिक साधारण सभा 
-</marquee>
-
-<nav>
-    <!-- Navigation links can be added here -->
-</nav>
-
-<main>
-    <section>
-        <h3 style="text-align:justify;">
-            <div class="blinking-marquee">
-            संस्थाको २७औं बार्षिक साधारण सभामा हाम्रो निमन्त्रणालाइ स्विकार गरि पाल्नुहुने हाम्रा सम्पूर्ण अतिथि ,शेयर सदस्य ज्युहरु लगायत उपस्थित सम्पूर्णमा हार्दिक स्वागत गर्दछौं ।   
+    <div class="container mx-auto px-4 py-8 relative z-10">
+        
+        <!-- Top Header Banner -->
+        <header class="text-center mb-8">
+            <div class="inline-flex items-center gap-3 bg-red-600 text-white px-8 py-3 rounded-full font-bold text-2xl shadow-2xl mb-4 border-2 border-white/40">
+                <i class="fa-solid fa-map-marker-alt text-yellow-300"></i>
+                <span>नमुना कृषक बहुमुखी सहकारी स‌स्था लि</span>
             </div>
-        </h3>
-    </section>
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-wide glow-title mt-2 leading-tight">
+                दुग्ध उत्पादक किसानहरुलाइ प्रोत्साहन बितरण कार्यक्रम
+            </h1>
+            <p class="text-2xl md:text-3xl text-yellow-300 font-bold mt-2 shadow-sm">
+                आर्थिक सहयोग: मनहरी गाँउपालिका
+            </p>
+        </header>
 
-    <!-- Audio Player Section with Autoplay and Loop -->
-    <section>
-        <h4>27th AGM</h4>
-        <!-- Audio player with autoplay and loop enabled -->
-        <audio id="audioPlayer" controls autoplay loop>
-            <source src="https://github.com/namunacoop/Namunafmc/blob/main/%E0%A5%A8%E0%A5%AD%E0%A4%94%E0%A4%82%20%E0%A4%AC%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%B7%E0%A4%BF%E0%A4%95%20%E0%A4%B8%E0%A4%BE%E0%A4%A7%E0%A4%BE%E0%A4%B0%E0%A4%A3%20%E0%A4%B8%E0%A4%AD%E0%A4%BE%20%E0%A4%A8%E0%A4%AE%E0%A5%81%E0%A4%A8%E0%A4%BE%20%E0%A4%95%E0%A5%83%E0%A4%B7%E0%A4%95%20%E0%A4%AC%E0%A4%B9%E0%A5%81%E0%A4%AE%E0%A5%81%E0%A4%96%E0%A5%80%20%20%E0%A4%B8%E0%A4%B9%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A5%80%20.mp3?raw=true" type="audio/mp3">
-            Your browser does not support the audio element.
-        </audio>
-    </section>
+        <!-- Highlight Subsidy Rate Banner (Width Increased by 50%) -->
+        <div class="max-w-6xl mx-auto mb-10">
+            <div class="bg-gradient-to-r from-yellow-500 via-amber-400 to-yellow-500 rounded-3xl p-6 md:p-8 text-center text-gray-900 font-extrabold shadow-2xl border-4 border-white glow-badge transform transition hover:scale-105">
+                <div class="text-3xl md:text-4xl text-gray-900 mb-1">दुध उत्पादनमा आधारीत अनुदान कार्यक्रम </div>
+                <div class="text-6xl md:text-8xl font-black text-red-700 tracking-wider my-2">
+                    रु. ३ /- <span class="text-3xl md:text-5xl text-gray-900">प्रति लिटर</span>
+                </div>
+            </div>
+        </div>
 
-    <section>
-        <div id="fb-root"></div>
-        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0"></script>
-        <div class="fb-like" data-href="https://namunacoop.github.io/namunafmc/suchana.html" data-width="" data-layout="standard" data-action="like" data-size="small" data-share="true"></div>
-    </section>
-</main>
+        <!-- Palika Stats Overview -->
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <div class="glass-card p-6 text-center transform hover:-translate-y-2 transition duration-300">
+                <div class="text-5xl text-blue-600 mb-2"><i class="fa-solid fa-users"></i></div>
+                <div class="text-4xl font-black text-gray-800">१७२+</div>
+                <div class="text-2xl font-bold text-gray-600">लाभान्वित कृषकहरू</div>
+            </div>
+            <div class="glass-card p-6 text-center transform hover:-translate-y-2 transition duration-300">
+                <div class="text-5xl text-emerald-600 mb-2"><i class="fa-solid fa-glass-water-droplet"></i></div>
+                <div class="text-4xl font-black text-gray-800">३७०८३०।१०</div>
+                <div class="text-2xl font-bold text-gray-600">वार्षिक उत्पादन लिटर</div>
+            </div>
+            <div class="glass-card p-6 text-center transform hover:-translate-y-2 transition duration-300">
+                <div class="text-5xl text-amber-500 mb-2"><i class="fa-solid fa-coins"></i></div>
+                <div class="text-4xl font-black text-gray-800">रु. १११२४९०।३०</div>
+                <div class="text-2xl font-bold text-gray-600">वार्षिक अनुदान रकम</div>
+            </div>
+        </div>
+    </div>
 
-<footer>
-    <p>&copy; 2024 Shree Namuaa Farmer Multiple Co-operative Ltd. All rights reserved.</p>
-</footer>
+    <!-- Walking Cows Background Animation Layer -->
+    <div class="cow-animation-container">
+        <!-- Walking Cow 1 -->
+        <div class="walking-cow-1" title="मनहरी गाई">
+            🐄
+        </div>
+        <!-- Walking Cow 2 -->
+        <div class="walking-cow-2" title="दुग्ध विकास">
+            🐄
+        </div>
+        <!-- Walking Cow 3 -->
+        <div class="walking-cow-3" title="उन्नत गाई पालन">
+            🐄
+        </div>
+    </div>
 
-<script>
-    // JavaScript to autoplay the audio on load if it doesn't work with 'autoplay' attribute
-    window.onload = function() {
-        var audio = document.getElementById('audioPlayer');
-        audio.play();
-    };
-</script>
+    <script>
+        // Update Live Slider Output
+        const milkSlider = document.getElementById('milkLiters');
+        const literDisplay = document.getElementById('literDisplay');
 
+        if(milkSlider) {
+            milkSlider.addEventListener('input', function() {
+                const val = this.value;
+                literDisplay.textContent = Number(val).toLocaleString('ne-NP') + ' लिटर';
+                calculateGrant();
+            });
+        }
+
+        // Function to Calculate and Display Grant Amount
+        function calculateGrant() {
+            const nameInput = document.getElementById('farmerName');
+            const wardInput = document.getElementById('wardNo');
+            if(!nameInput || !wardInput || !milkSlider) return;
+
+            const name = nameInput.value || 'कृषक';
+            const ward = wardInput.value;
+            const liters = parseInt(milkSlider.value) || 0;
+            const totalAmount = liters * 3;
+
+            // Nepali Number Formatter Helper
+            const nepaliDigits = ['०','१','२','३','४','५','६','७','८','९'];
+            function toNepaliNum(num) {
+                return num.toString().replace(/\d/g, d => nepaliDigits[d]);
+            }
+
+            // Update UI elements
+            document.getElementById('resName').textContent = name;
+            document.getElementById('resWard').textContent = 'मनहरी, वडा नं. ' + toNepaliNum(ward);
+            document.getElementById('resMilk').textContent = toNepaliNum(liters.toLocaleString('en-US')) + ' लिटर';
+            document.getElementById('resTotal').textContent = 'रु. ' + toNepaliNum(totalAmount.toLocaleString('en-US')) + '/-';
+        }
+
+        // Initial trigger on load
+        window.onload = function() {
+            calculateGrant();
+        };
+    </script>
 </body>
 </html>
+```[cite: 1]
